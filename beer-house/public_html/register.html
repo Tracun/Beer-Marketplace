@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Beer House: Cadastro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Custom fonts for this template -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- Custom styles for this template -->
+        <link href="style/agency.css" rel="stylesheet">
+        <link href="style/style.css" rel="stylesheet">
+    </head>
+    <body class="bg-light">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Beer House</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                    <div class="input-group mb-3 div-search">
+                        <input type="text" class="form-control" placeholder="Buscar ...." aria-label="Buscar ...." aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#"> <i class="fas fa-user navbar-icon"></i></a>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#"><i class="fas fa-beer navbar-icon "  data-toggle="tooltip" data-placement="top" title="Meu carrinho"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Header -->
+        <header class="masthead">
+            <div class="container">
+                <div class="intro-text">
+                    <div class="intro-lead-in">Drink Experience!</div>
+                </div>
+            </div>
+        </header>
+        <div class="container" >
+            <div class="">
+
+                <div class="card card-register mx-auto mt-5">
+                    <div class="card-header">Faça seu cadastro</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col-md-5">
+                                        <label for="gender" class="required">Nome <em>*</em></label>
+                                        <input class="form-control" id="InputName" type="text" aria-describedby="nameHelp" placeholder="Rogerinho">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="gender" class="required">Sobrenome <em>*</em></label>
+                                        <input class="form-control" id="InputLastName" type="text" aria-describedby="nameHelp" placeholder="do Ingá">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <label for="gender" class="required">Email <em>*</em></label>
+                                        <input class="form-control" id="InputEmail1" type="email" aria-describedby="emailHelp" placeholder="lucas@seuemail.com.br">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="gender" class="required">Confirmar email <em>*</em></label>
+                                        <input class="form-control" id="InputEmail1" type="email" aria-describedby="emailHelp" placeholder="lucas@seuemail.com.br">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <label for="gender" class="required">Senha <em>*</em></label>
+                                        <input class="form-control" id="InputPassword1" type="password" placeholder="Senha">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="gender" class="required">Confirmar senha <em>*</em></label>
+                                        <input class="form-control" id="ConfirmPassword" type="password" placeholder="Confirme sua senha">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col-md-5">
+                                        <label for="exampleConfirmPassword">CPF <em>*</em></label>
+                                        <input class="form-control" id="InputCPF" type="text" maxlength="11" placeholder="Digite apenas números">
+                                    </div>
+
+                                    <div class="dropdown">
+                                        <label for="gender" class="required">Sexo <em>*</em></label>
+
+                                        <select class="form-control" id="InputSex">
+                                            <option>Feminimo</option>
+                                            <option>Masculino</option>
+                                            <option>Não informar</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-4.5">
+                                        <label for="gender" class="required">Data de nascimento <em>*</em></label>
+                                        <input class="form-control" id="InputNasc" type="text" maxlength="10" placeholder="DD/MM/AAAA">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group" >
+                                <div class="form-row">
+                                    <div class="col-md-3">
+                                        <label for="User" class="required">CEP<em>*</em></label>
+                                        <input class="form-control" id="cep" name="cep" type="text"  placeholder="04046-500" required="required" onkeypress="return onlyNum(event)" onblur="pesquisacep(this.value);">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="User" class="required">Endereço<em>*</em></label>
+                                        <input class="form-control" id="endereco" name="endereco" type="text"  placeholder="" required="required">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="User" class="required">Numero<em>*</em></label>
+                                        <input class="form-control" id="numEndereco" name="numEndereco" type="text"  placeholder="" required="required">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col-md-2">
+                                        <label for="User" class="required">Bairo<em>*</em></label>
+                                        <input class="form-control" id="bairro" name="bairro" type="text"  placeholder="" required="required">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="User" class="required">Cidade<em>*</em></label>
+                                        <input class="form-control" id="cidade" name="cidade" type="text"  placeholder="" required="required">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="User" class="required">UF<em>*</em></label>
+                                        <input class="form-control" id="uf" name="uf" type="text"  placeholder="" required="required">
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <label for="gender" class="required">Telefone <em>*</em></label>
+                                        <input class="form-control" id="InputPhone" type="text" placeholder="(11) 1243-14589" onkeyup="FormatTel(this, event)" onkeypress="return onlyNum(event)" maxlength="14">
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <label for="gender">Celular</label>
+                                        <input class="form-control" id="InputCellPhone" type="text" placeholder="(11) 1243-14589" onkeyup="FormatTel(this, event)" onkeypress="return onlyNum(event)" maxlength="14">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a class="btn btn-primary btn-block" href="#">Finalizar cadastro</a>
+                        </form>
+                        <div class="text-center">
+                            <a class="d-block small mt-3" href="login.html">Realizar login</a>
+                            <a class="d-block small" href="#">Esqueceu a senha?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+        <!-- Custom scripts for this template -->
+        <script src="script/agency.js"></script>
+        <script src="script/script.js"></script>
+    </body>
+</html>
+
+
