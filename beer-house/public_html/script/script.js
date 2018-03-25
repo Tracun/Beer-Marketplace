@@ -1,10 +1,16 @@
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+@author: Lucas Lacerda 
+@author:  ... 
+
+*/
 
 
+// FUNÇÕES DE MASCARA PAARA CPF, CNPJ, TELEFONE E CEP. SERÃO MELHORADAS PARA A SEGUNDA ENTREGA 
+// SERÁ INCLUSO FUNÇÕES DE VALIDAÇÃO AOS MESMOS. 
+
+function FormatCPF(campo, teclapress) {
+   
+}
 
 
 function FormatTel(campo, teclapres) {
@@ -90,4 +96,16 @@ function limpa_formulário_cep() {
     document.getElementById('cidade').value = ("");
     document.getElementById('uf').value = ("");
     document.getElementById('ibge').value = ("");
+}
+
+function onlyNum(e) {
+    var tecla = (window.event) ? event.keyCode : e.which;
+    if ((tecla > 47 && tecla < 58))
+        return true;
+    else {
+        if (tecla == 8 || tecla == 0)
+            return true;
+        else
+            return false;
+    }
 }
