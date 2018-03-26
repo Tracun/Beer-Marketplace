@@ -6,6 +6,7 @@ and open the template in the editor.
 /* 
     Created on : 24/03/2018, 14:21:51
     Author     : Lucas Lacerda
+    Author     : Lucas Alves
 */
 
 .navbar-icon{
@@ -49,8 +50,8 @@ and open the template in the editor.
     display:block;
     position:relative;
     z-index:10;
-  width:215px ;
-  height:240px;
+    width:215px ;
+    height:240px;
     margin:15px 0
 }
 .demo-3 figure figcaption {
@@ -109,4 +110,7 @@ and open the template in the editor.
     transform:rotateY(0)
 }
 
-
+.page-footer {
+    background-color: #212529;
+    color: white;
+}
