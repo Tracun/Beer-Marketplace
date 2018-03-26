@@ -3,7 +3,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : 24/03/2018, 14:21:51
     Author     : Lucas Lacerda
     Author     : Lucas Alves
@@ -17,7 +17,6 @@ and open the template in the editor.
     margin-left: 25px;
     margin-top:15px;
     width: 80%;
-
 }
 .div-search button.user{
     font-size: 30px;
@@ -30,7 +29,15 @@ and open the template in the editor.
     height: 350px;
 }
 
-.demo-3{
+.div-logo{
+    padding-top: 10pt;
+    padding-bottom: 10pt;
+    padding-left: 5pt;
+
+}
+.logo-index{
+    width: 250px;
+    height: 240px;
 
 }
 
@@ -113,4 +120,10 @@ and open the template in the editor.
 .page-footer {
     background-color: #212529;
     color: white;
+}
+
+.btn-enviar-email {
+    color: #212529;
+    background-color: #fed136;
+
 }

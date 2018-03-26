@@ -185,7 +185,7 @@ header.masthead {
 
 header.masthead .intro-text {
     padding-top: 150px;
-    padding-bottom: 90px;    
+    padding-bottom: 90px;
 }
 
 header.masthead .intro-text .intro-lead-in {
@@ -228,6 +228,23 @@ header.masthead .intro-text .intro-heading {
 .service-heading {
     margin: 15px 0;
     text-transform: none;
+}
+.categoria .card-header{
+    background-color: #f7e1b9;
+
+}
+.categoria .categoria-item{
+    color:#f7bf00;
+}
+
+.categoria .card-header{
+    font-weight: bold;
+    color: #211b06;
+    font-size: 14pt;
+}
+.categoria .categoria-item:hover{
+    font-weight: bold;
+    font-size: 20pt;
 }
 
 footer {

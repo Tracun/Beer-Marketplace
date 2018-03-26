@@ -23,14 +23,16 @@ and open the template in the editor.
         <!-- Custom styles for this template -->
         <link href="style/agency.css" rel="stylesheet">
         <link href="style/style.css" rel="stylesheet">
+
+
     </head>
-    <body>
+    <body class="bg-light">
 
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
 
-                <a class="navbar-brand js-scroll-trigger" href="index.html">Beer House</a>                
+                <a class="navbar-brand js-scroll-trigger" href="index.html">Beer House</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fa fa-bars"></i>
@@ -51,7 +53,7 @@ and open the template in the editor.
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#"><i class="fas fa-beer navbar-icon "  data-toggle="tooltip" data-placement="top" title="Meu carrinho"></i></a>
+                            <a class="nav-link js-scroll-trigger" href="cart.html"><i class="fas fa-beer navbar-icon "  data-toggle="tooltip" data-placement="top" title="Meu carrinho"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -75,18 +77,44 @@ and open the template in the editor.
 
                 <div class="col-lg-3">
 
-                    <h1 class="my-4">Beer House</h1>
-                    <div class="list-group">
+
+                    <div class="col-sm-3 div-logo">
+                        <img class="img-responsive logo-index text-md-left" src="img/Beer_House_Logo.png"/>
+                    </div>
+
+                    <!--                    <h1 class="my-4">Beer House</h1>-->
+
+                    <div class="list-group categoria">
                         <div class="card-header">Categorias</div>
-                        <a href="#" class="list-group-item">Lager</a>
-                        <a href="#" class="list-group-item">Pilsen</a>
-                        <a href="#" class="list-group-item">Pale Ale</a>
-                        <a href="#" class="list-group-item">Strong Ale</a>
-                        <a href="#" class="list-group-item">Porter</a>
-                        <a href="#" class="list-group-item">Amber Ale Red Ale</a>
-                        <a href="#" class="list-group-item">Dubbel</a>
-                        <a href="#" class="list-group-item">Weissbier</a>
-                        <a href="#" class="list-group-item">Bock</a>
+                        <a href="#" class="list-group-item categoria-item">Lager</a>
+                        <a href="#" class="list-group-item categoria-item">Pilsen</a>
+                        <a href="#" class="list-group-item categoria-item">Pale Ale</a>
+                        <a href="#" class="list-group-item categoria-item">Strong Ale</a>
+                        <a href="#" class="list-group-item categoria-item">Amber Ale</a>
+                        <a href="#" class="list-group-item categoria-item">Porter</a>
+                        <a href="#" class="list-group-item categoria-item">Dubbel</a>
+                        <a href="#" class="list-group-item categoria-item">Weissbier</a>
+                        <a href="#" class="list-group-item categoria-item">Bock</a>
+
+                    </div>
+                    <br> <hr> <br>
+                    <div class="list-group categoria">
+                        <div class="card-header">Filtrar Busca</div>
+                        <div class="list-group-item ">
+                            <input class="form-check-input " type="radio" id="filtroOrigem" name="filtroOrigem" value="Nacional" >
+                            <label class="form-check-label" for="inlineCheckbox1">Nacional</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="filtroOrigem" name="filtroOrigem" value="Importada" >
+                            <label class="form-check-label " for="inlineCheckbox2">Importada</label>
+                            <br> <br>
+
+                            <select class="form-control" data-live-search="true">
+                                <option>Default select</option>
+                                <option>Default select</option>
+                                <option>Default select</option>
+                            </select>
+
+                        </div>
 
                     </div>
 
@@ -138,7 +166,7 @@ and open the template in the editor.
                                             </figcaption>
                                         </figure>
                                     </li>
-                                </ul>                              
+                                </ul>
                             </div>
                         </div>
 
@@ -157,7 +185,7 @@ and open the template in the editor.
                                             </figcaption>
                                         </figure>
                                     </li>
-                                </ul>                              
+                                </ul>
                             </div>
                         </div>
 
@@ -176,7 +204,7 @@ and open the template in the editor.
                                             </figcaption>
                                         </figure>
                                     </li>
-                                </ul>                              
+                                </ul>
                             </div>
                         </div>
 
@@ -186,7 +214,7 @@ and open the template in the editor.
                                     <li>
                                         <figure>
                                             <div>
-                                                <img src="http://edelweissrestaurant.com.br/wp-content/uploads/2017/03/cerveja-dom-haus-dom-pedro-helles-600ml.png" width="215" height="240"></img>
+                                                <img src="http://edelweissrestaurant.com.br/wp-content/uploads/2017/03/cerveja-dom-haus-dom-pedro-helles-600ml.png"/>
                                             </div>
 
                                             <figcaption>
@@ -195,7 +223,7 @@ and open the template in the editor.
                                             </figcaption>
                                         </figure>
                                     </li>
-                                </ul>                              
+                                </ul>
                             </div>
                         </div>
 
@@ -205,7 +233,7 @@ and open the template in the editor.
                                     <li>
                                         <figure>
                                             <div>
-                                                <img src="https://i0.wp.com/brejada.com/wp-content/uploads/2014/11/Brotas-Beer-Bock.jpg" width="215" height="240"></img>
+                                                <img src="https://i0.wp.com/brejada.com/wp-content/uploads/2014/11/Brotas-Beer-Bock.jpg" />
                                             </div>
 
                                             <figcaption>
@@ -214,7 +242,7 @@ and open the template in the editor.
                                             </figcaption>
                                         </figure>
                                     </li>
-                                </ul>                              
+                                </ul>
                             </div>
                         </div>
 
@@ -224,7 +252,7 @@ and open the template in the editor.
                                     <li>
                                         <figure>
                                             <div>
-                                                <img src="https://i.pinimg.com/736x/9c/82/6b/9c826b14b9108c5859bd3c437c59e37e--pilsen-brewing.jpg" width="215" height="240"></img>
+                                                <img src="https://i.pinimg.com/736x/9c/82/6b/9c826b14b9108c5859bd3c437c59e37e--pilsen-brewing.jpg"/>
                                             </div>
 
                                             <figcaption>
@@ -233,10 +261,66 @@ and open the template in the editor.
                                             </figcaption>
                                         </figure>
                                     </li>
-                                </ul>                              
+                                </ul>
                             </div>
                         </div>
 
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="demo-3">
+                                <ul>
+                                    <li>
+                                        <figure>
+                                            <div>
+                                                <img src="img/franziskaner.jpg"/>
+                                            </div>
+
+                                            <figcaption>
+                                                <h2>This is the best beer ever!</h2>
+                                                <p>Price: XXXX,XX Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+                                            </figcaption>
+                                        </figure>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="demo-3">
+                                <ul>
+                                    <li>
+                                        <figure>
+                                            <div>
+                                                <img src="img/colorado_indica.jpg"/>
+                                            </div>
+
+                                            <figcaption>
+                                                <h2>This is the best beer ever!</h2>
+                                                <p>Price: XXXX,XX Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+                                            </figcaption>
+                                        </figure>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="demo-3">
+                                <ul>
+                                    <li>
+                                        <figure>
+                                            <div>
+                                                <img src="https://i0.wp.com/brejada.com/wp-content/uploads/2014/11/Brotas-Beer-Bock.jpg" />
+                                            </div>
+
+                                            <figcaption>
+                                                <h2>This is the best beer ever!</h2>
+                                                <p>Price: XXXX,XX Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+                                            </figcaption>
+                                        </figure>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <!-- /.row -->
 
@@ -260,28 +344,24 @@ and open the template in the editor.
                     <!--First column-->
                     <div class="col-md-4">
                         <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Qualquer Informaçao</h5>
-                        <p>Lorem ipsum netus massa quisque ultricies taciti tincidunt, lacus hendrerit curabitur 
+                        <p>Lorem ipsum netus massa quisque ultricies taciti tincidunt, lacus hendrerit curabitur
                             sociosqu condimentum fames quis, eu orci elit duis aptent condimentum. est leo fermentum nibh</p>
+
+
                     </div>
                     <!--/.First column-->
 
                     <hr class="clearfix w-100 d-md-none">
 
                     <!--Second column-->
-                    <div class="col-md-2 mx-auto">
-                        <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Links</h5>
+                    <div class="col-md-4 mx-auto">
+                        <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Receba nossas novidades</h5>
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#!">Link 1</a>
-                            </li>
-                            <li>
-                                <a href="#!">Link 2</a>
-                            </li>
-                            <li>
-                                <a href="#!">Link 3</a>
-                            </li>
-                            <li>
-                                <a href="#!">Link 4</a>
+                                <div class="col-md-10">
+                                    <input class="form-control" id="email" name="email" type="email" placeholder="cadastre seu email" required="required"><br>
+                                    <a class="btn btn-primary btn-block btn-enviar-email" href="#">Enviar</a>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -318,21 +398,6 @@ and open the template in the editor.
 
             <hr>
 
-            <!--Call to action-->
-            <div class="text-center py-3">
-                <ul class="list-unstyled list-inline mb-0">
-                    <li class="list-inline-item">
-                        <h5 class="mb-1">Faça parte do maior Marketplace do Brasil!</h5>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#!" class="btn btn-danger btn-rounded">Registre-se!</a>
-                    </li>
-                </ul>
-            </div>
-            <!--/.Call to action-->
-
-            <hr>
-
             <!--Social buttons-->
             <div class="text-center">
                 <ul class="list-unstyled list-inline">
@@ -363,7 +428,7 @@ and open the template in the editor.
             <!--Copyright-->
             <div class="footer-copyright py-3 text-center">
                 © 2018 Copyright:
-                <a href="https://google.com.br"> T3L </a>
+                <a href="#"> T3L </a>
             </div>
             <!--/.Copyright-->
 
@@ -381,5 +446,6 @@ and open the template in the editor.
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
         <!-- Custom scripts for this template -->
         <script src="script/agency.js"></script>
+
     </body>
 </html>
