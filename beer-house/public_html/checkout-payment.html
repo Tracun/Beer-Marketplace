@@ -20,10 +20,16 @@ and open the template in the editor.
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
         <!-- Custom styles for this template -->
         <link href="style/agency.css" rel="stylesheet">
         <link href="style/style.css" rel="stylesheet">
         <link href="style/checkout.css" rel="stylesheet">
+
+         <!-- Pop-up -->
+        <link rel="stylesheet" type="text/css" href="style/popup.css">
+
+    </head>
 
         <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -131,7 +137,8 @@ and open the template in the editor.
                         <label>
                             <input class="linput" type="checkbox" checked="checked" name="sameadr"> Endereço de entrega é o mesmo de cobrança
                         </label>
-                        <input type="submit" value="Finalizar Pagamento" class="btn btn-primary btn-block lbtn">
+                        <input type="submit" data-popup-open="popup-1" value="Finalizar Pagamento" class="btn btn-primary btn-block lbtn">
+                      
                     </div>
                 </form>
             </div>
@@ -152,6 +159,16 @@ and open the template in the editor.
             </div>
         </div>
     </div>
+
+    <div class="popup" data-popup="popup-1">
+        <div class="popup-inner">
+                <img src="https://goo.gl/fNfvk5" height="100" width="100" title="Sucesso!">
+                    <p><h2>Operação realizada com sucesso!</h2></p>
+                    <p>Para retornar a página principal. <a data-popup-close="popup-1" href="index.html">Clique aqui.</a></p>
+                    <a class="popup-close" data-popup-close="popup-1" href="index.html">x</a>
+        </div>
+    </div>
+    
     <!-- end ckeckout page -->
 
 
@@ -260,8 +277,14 @@ and open the template in the editor.
 
 
     <!-- JavaScript -->
+    
+    <!-- Pop-up JS -->
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>  
+    <script type="text/javascript" src="script/jquery.popup.js"></script>
+    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
