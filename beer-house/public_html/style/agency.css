@@ -230,22 +230,32 @@ header.masthead .intro-text .intro-heading {
     text-transform: none;
 }
 .categoria .card-header{
-    background-color: #f7e1b9;
+    background-color: #212529;
+    /*    background-color: #f7e1b9;*/
 
 }
 .categoria .categoria-item{
+    font-weight: bold; /* alves */
     color:#f7bf00;
 }
 
 .categoria .card-header{
     font-weight: bold;
-    color: #211b06;
+    color: white;
+    /*    color: #211b06;*/
     font-size: 14pt;
 }
+
 .categoria .categoria-item:hover{
     font-weight: bold;
-    font-size: 20pt;
+    color: black;
+    background: #f7bf00;
 }
+
+/*.categoria .categoria-item:hover{
+    font-weight: bold;
+    font-size: 20pt;
+}*/
 
 footer {
     padding: 25px 0;
