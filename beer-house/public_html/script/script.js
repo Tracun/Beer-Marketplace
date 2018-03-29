@@ -1,15 +1,15 @@
 /* 
-@author: Lucas Lacerda 
-@author:  ... 
-
-*/
+ @author: Lucas Lacerda 
+ @author:  ... 
+ 
+ */
 
 
 // FUNÇÕES DE MASCARA PAARA CPF, CNPJ, TELEFONE E CEP. SERÃO MELHORADAS PARA A SEGUNDA ENTREGA 
 // SERÁ INCLUSO FUNÇÕES DE VALIDAÇÃO AOS MESMOS. 
 
 function FormatCPF(campo, teclapress) {
-   
+
 }
 
 

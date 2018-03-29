@@ -79,7 +79,15 @@ and open the template in the editor.
 
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#"> <img src="img\profile.png" alt="Perfil" title="Perfil"/></a>
+                            <div class="dropdown ldropdown">
+                                <button class="btn btnNavbar">
+                                    <a class="nav-link js-scroll-trigger" href="#"><img src="img\profile.png" alt="Perfil" title="Perfil"/></i></a>
+                                </button>
+                                <div class="dropdown-content ldropdown-content">
+                                    <a href="login.html">Entrar</a>
+                                    <a href="register.html">Registre-se</a>
+                                </div>
+                            </div> 
                         </li>
 
                         <li class="nav-item">
@@ -106,7 +114,7 @@ and open the template in the editor.
                 </div>
             </div> 
 
-
+            <!-- error-->
             <div class="jumbotron">
                 <h1 class="display-1"><i class="fa  fa-spin fa-cog fa-3x"></i></h1>
                 <h1 class="display-3">ERROR</h1>
@@ -114,6 +122,8 @@ and open the template in the editor.
                 <p class="lower-case">Talvez a página esteja em manutenção</p>
 
             </div>
+            <!-- end error-->
+
 
             <!--Footer-->
             <footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
