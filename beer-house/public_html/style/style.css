@@ -9,20 +9,6 @@ and open the template in the editor.
     Author     : Lucas Alves
 */
 
-.navbar-icon{
-    font-size: 30px;
-}
-
-.div-search{
-    margin-left: 25px;
-    margin-top:15px;
-    width: 80%;
-}
-.div-search button.user{
-    font-size: 30px;
-    background-color: transparent;
-    border-color: transparent;
-}
 
 .img-carousel{
     width: 900px;
@@ -116,47 +102,5 @@ and open the template in the editor.
     -moz-transform:rotateY(0);
     transform:rotateY(0)
 }
-
-.page-footer {
-    background-color: #212529;
-    color: white;
-}
-
-.btn-enviar-email {
-    color: #212529;
-    background-color: #fed136;
-
-}
-
-/* Dropdown Navbar */
-.btnNavbar {
-    background-color: transparent;
-    color: white;
-    padding: 0px;
-}
-
-.ldropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    z-index: 1;
-    text-transform: none;
-    font-weight: bold;
-}
-
-.ldropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.ldropdown-content a:hover {background-color: #fed136}
-
-.ldropdown:hover .ldropdown-content {
-    display: block;
-}
-/* end dropdown */
 
 

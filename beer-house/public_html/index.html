@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+    @author: Lucas Lacerda
 -->
 <html>
     <head>
@@ -21,7 +19,7 @@ and open the template in the editor.
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <!-- Custom styles for this template -->
-        <link href="style/agency.css" rel="stylesheet">
+        <link href="style/template.css" rel="stylesheet">
         <link href="style/style.css" rel="stylesheet">
 
 
@@ -53,8 +51,8 @@ and open the template in the editor.
                                     <a class="nav-link js-scroll-trigger" href="#"><img src="img\profile.png" alt="Perfil" title="Perfil"/></i></a>
                                 </button>
                                 <div class="dropdown-content ldropdown-content">
-                                    <a href="#">Entrar</a>
-                                    <a href="#">Registre-se</a>
+                                    <a href="login.html">Entrar</a>
+                                    <a href="register.html">Registre-se</a>
                                 </div>
                             </div> 
                         </li>
@@ -91,7 +89,7 @@ and open the template in the editor.
                     <!--                    <h1 class="my-4">Beer House</h1>-->
 
                     <div class="list-group categoria">
-                        <div class="card-header">Categorias</div>
+                        <div class="card-header">Estilos</div>
                         <a href="#" class="list-group-item categoria-item">Lager</a>
                         <a href="#" class="list-group-item categoria-item">Pilsen</a>
                         <a href="#" class="list-group-item categoria-item">Pale Ale</a>
@@ -105,26 +103,39 @@ and open the template in the editor.
                     </div>
                     <br> <hr> <br>
                     <div class="list-group categoria">
-                        <div class="card-header">Filtrar Busca</div>
-                        <div class="list-group-item ">
-                            <input class="form-check-input " type="radio" id="filtroOrigem" name="filtroOrigem" value="Nacional" >
-                            <label class="form-check-label" for="inlineCheckbox1">Nacional</label>
-                            <br>
-                            <input class="form-check-input" type="radio" id="filtroOrigem" name="filtroOrigem" value="Importada" >
-                            <label class="form-check-label " for="inlineCheckbox2">Importada</label>
-                            <br> <br>
+                        <div class="card-header">Sabores</div>
+                        <a href="#" class="list-group-item categoria-item">Adocicada</a>
+                        <a href="#" class="list-group-item categoria-item">Amarga</a>
+                        <a href="#" class="list-group-item categoria-item">Forte</a>
+                        <a href="#" class="list-group-item categoria-item">Frutada</a>
+                        <a href="#" class="list-group-item categoria-item">Suave</a>
 
-                            <select class="form-control" data-live-search="true">
-                                <option>Default select</option>
-                                <option>Default select</option>
-                                <option>Default select</option>
-                            </select>
+                    </div>
+
+
+                    <br> <hr> <br>
+                    <div class="list-group categoria">
+                        <div class="card-header">+ Filtros</div>
+                        <div class="list-group-item ">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="origem" id="Nacional" value="nacional">
+                                <label class="form-check-label" for="Nacional">Nacional</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="origem" id="Importada" value="importada">
+                                <label class="form-check-label" for="Importada">Importada</label>
+                            </div>
+
+                            <br> <hr>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="fabricante" id="fabricante" placeholder="Fabricante">
+                            </div>
 
                         </div>
 
                     </div>
-
                 </div>
+
                 <!-- /.col-lg-3 -->
 
                 <div class="col-lg-9">
@@ -165,11 +176,16 @@ and open the template in the editor.
                                             <div>
                                                 <img src="img/franziskaner.jpg"/>
                                             </div>
-
-                                            <figcaption>
-                                                <h2>This is the best beer ever!</h2>
-                                                <p>Price: XXXX,XX Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                                            </figcaption>
+                                            <a href='product-page.html'>
+                                                <figcaption>
+                                                    <h2>"Nome da Breja" <br>R$ 20,99 </h2>
+                                                    <p> Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.</p>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Comprar</button>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Add. Carrinho</button>
+                                                </figcaption>
+                                            </a>
                                         </figure>
                                     </li>
                                 </ul>
@@ -180,16 +196,22 @@ and open the template in the editor.
                             <div class="demo-3">
                                 <ul>
                                     <li>
-                                        <figure>
-                                            <div>
-                                                <img src="img/colorado_indica.jpg"/>
-                                            </div>
+                                        <a href='product-page.html'>
+                                            <figure>
+                                                <div>
+                                                    <img src="img/colorado_indica.jpg"/>
+                                                </div>
 
-                                            <figcaption>
-                                                <h2>This is the best beer ever!</h2>
-                                                <p>Price: XXXX,XX Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                                            </figcaption>
-                                        </figure>
+                                                <figcaption>
+                                                    <h2>"Nome da Breja" <br>R$ 20,99 </h2>
+                                                    <p> Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.</p>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Comprar</button>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Add. Carrinho</button>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -199,16 +221,24 @@ and open the template in the editor.
                             <div class="demo-3">
                                 <ul>
                                     <li>
-                                        <figure>
-                                            <div>
-                                                <img src="img/young.jpg"/>
-                                            </div>
+                                        <a href='product-page.html'>
+                                            <figure>
+                                                <div>
+                                                    <img src="img/young.jpg"/>
+                                                </div>
 
-                                            <figcaption>
-                                                <h2>This is the best beer ever!</h2>
-                                                <p>Price: XXXX,XX Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                                            </figcaption>
-                                        </figure>
+                                                <figcaption>
+                                                    <h2>"Nome da Breja" <br>R$ 20,99 </h2>
+                                                    <p> Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.</p>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Comprar</button>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Add. Carrinho</button>
+                                                </figcaption>
+
+
+                                            </figure>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -218,16 +248,22 @@ and open the template in the editor.
                             <div class="demo-3">
                                 <ul>
                                     <li>
-                                        <figure>
-                                            <div>
-                                                <img src="http://edelweissrestaurant.com.br/wp-content/uploads/2017/03/cerveja-dom-haus-dom-pedro-helles-600ml.png"/>
-                                            </div>
+                                        <a href='product-page.html'>
+                                            <figure>
+                                                <div>
+                                                    <img src="http://edelweissrestaurant.com.br/wp-content/uploads/2017/03/cerveja-dom-haus-dom-pedro-helles-600ml.png"/>
+                                                </div>
 
-                                            <figcaption>
-                                                <h2>This is the best beer ever!</h2>
-                                                <p>Price: XXXX,XX Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                                            </figcaption>
-                                        </figure>
+                                                <figcaption>
+                                                    <h2>"Nome da Breja" <br>R$ 20,99 </h2>
+                                                    <p> Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.</p>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Comprar</button>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Add. Carrinho</button>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -237,96 +273,132 @@ and open the template in the editor.
                             <div class="demo-3">
                                 <ul>
                                     <li>
+                                        <a href='product-page.html'>
+                                            <figure>
+                                                <div>
+                                                    <img src="https://i0.wp.com/brejada.com/wp-content/uploads/2014/11/Brotas-Beer-Bock.jpg" />
+                                                </div>
+
+                                                <figcaption>
+                                                    <h2>"Nome da Breja" <br>R$ 20,99 </h2>
+                                                    <p> Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.</p>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Comprar</button>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Add. Carrinho</button>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="demo-3">
+                                <ul>
+                                    <li>
+                                        <a href='product-page.html'>
+                                            <figure>
+                                                <div>
+                                                    <img src="https://i.pinimg.com/736x/9c/82/6b/9c826b14b9108c5859bd3c437c59e37e--pilsen-brewing.jpg"/>
+                                                </div>
+
+                                                <figcaption>
+                                                    <h2>"Nome da Breja" <br>R$ 20,99 </h2>
+                                                    <p> Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.</p>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Comprar</button>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Add. Carrinho</button>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="demo-3">
+                                <ul>
+                                    <li>
+                                        <a href='product-page.html'>
+                                            <figure>
+                                                <div>
+                                                    <img src="img/franziskaner.jpg"/>
+                                                </div>
+
+                                                <figcaption>
+                                                    <h2>"Nome da Breja" <br>R$ 20,99 </h2>
+                                                    <p> Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.</p>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Comprar</button>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Add. Carrinho</button>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="demo-3">
+                                <ul>
+                                    <li>
+                                        <a href='product-page.html'>
+                                            <figure>
+                                                <div>
+                                                    <img src="img/colorado_indica.jpg"/>
+                                                </div>
+
+                                                <figcaption>
+                                                    <h2>"Nome da Breja" <br>R$ 20,99 </h2>
+                                                    <p> Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.</p>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Comprar</button>
+                                                    <br>
+                                                    <button type="button" class="btn btn-primary btn-block">Add. Carrinho</button>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+
+                            <div class="demo-3">
+                                <ul>
+                                    <li>
+
                                         <figure>
+
                                             <div>
                                                 <img src="https://i0.wp.com/brejada.com/wp-content/uploads/2014/11/Brotas-Beer-Bock.jpg" />
                                             </div>
 
-                                            <figcaption>
-                                                <h2>This is the best beer ever!</h2>
-                                                <p>Price: XXXX,XX Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                                            </figcaption>
+                                            <a href='product-page.html'>
+                                                <figcaption>
+                                                    <h2>"Nome da Breja" <br>R$ 20,99 </h2>
+                                                    <p> Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.</p>
+                                                    <br>
+                                                    <button class="btn btn-primary btn-block" value="Comprar">Comprar</button>
+                                                    <br>
+                                                    <button class="btn btn-primary btn-block">Add. Carrinho</button>
+                                                </figcaption>
+                                            </a>
                                         </figure>
+
                                     </li>
                                 </ul>
                             </div>
+
                         </div>
 
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="demo-3">
-                                <ul>
-                                    <li>
-                                        <figure>
-                                            <div>
-                                                <img src="https://i.pinimg.com/736x/9c/82/6b/9c826b14b9108c5859bd3c437c59e37e--pilsen-brewing.jpg"/>
-                                            </div>
-
-                                            <figcaption>
-                                                <h2>This is the best beer ever!</h2>
-                                                <p>Price: XXXX,XX Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                                            </figcaption>
-                                        </figure>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="demo-3">
-                                <ul>
-                                    <li>
-                                        <figure>
-                                            <div>
-                                                <img src="img/franziskaner.jpg"/>
-                                            </div>
-
-                                            <figcaption>
-                                                <h2>This is the best beer ever!</h2>
-                                                <p>Price: XXXX,XX Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                                            </figcaption>
-                                        </figure>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="demo-3">
-                                <ul>
-                                    <li>
-                                        <figure>
-                                            <div>
-                                                <img src="img/colorado_indica.jpg"/>
-                                            </div>
-
-                                            <figcaption>
-                                                <h2>This is the best beer ever!</h2>
-                                                <p>Price: XXXX,XX Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                                            </figcaption>
-                                        </figure>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="demo-3">
-                                <ul>
-                                    <li>
-                                        <figure>
-                                            <div>
-                                                <img src="https://i0.wp.com/brejada.com/wp-content/uploads/2014/11/Brotas-Beer-Bock.jpg" />
-                                            </div>
-
-                                            <figcaption>
-                                                <h2>This is the best beer ever!</h2>
-                                                <p>Price: XXXX,XX Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                                            </figcaption>
-                                        </figure>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                     <!-- /.row -->
 
@@ -349,9 +421,8 @@ and open the template in the editor.
 
                     <!--First column-->
                     <div class="col-md-4">
-                        <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Qualquer Informaçao</h5>
-                        <p>Lorem ipsum netus massa quisque ultricies taciti tincidunt, lacus hendrerit curabitur
-                            sociosqu condimentum fames quis, eu orci elit duis aptent condimentum. est leo fermentum nibh</p>
+                        <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Sobre</h5>
+                        <p>Nós é pika e o resto é buraco</p>
 
 
                     </div>
