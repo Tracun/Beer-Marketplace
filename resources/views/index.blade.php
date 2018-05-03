@@ -20,15 +20,16 @@
 <!--  categoria será uma tabela -->
         <div class="list-group categoria">
             <div class="card-header">Estilos</div>
-            <a href="#" class="list-group-item categoria-item">Lager</a>
+            <a href="#" class="list-group-item categoria-item">{{$categories}}</a>
+
+        <!--    <a href="#" class="list-group-item categoria-item">Lager</a>
             <a href="#" class="list-group-item categoria-item">Pilsen</a>
-            <a href="#" class="list-group-item categoria-item">Pale Ale</a>
             <a href="#" class="list-group-item categoria-item">Strong Ale</a>
             <a href="#" class="list-group-item categoria-item">Amber Ale</a>
             <a href="#" class="list-group-item categoria-item">Porter</a>
             <a href="#" class="list-group-item categoria-item">Dubbel</a>
             <a href="#" class="list-group-item categoria-item">Weissbier</a>
-            <a href="#" class="list-group-item categoria-item">Bock</a>
+            <a href="#" class="list-group-item categoria-item">Bock</a> -->
 
         </div>
         <br> <hr> <br>

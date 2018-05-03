@@ -10,10 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
 
 // a url ira conter o id do produto para ser passado para a pagina carregar correto
 Route::get('/product-page', function () {
@@ -23,11 +20,18 @@ Route::get('/product-page', function () {
 
 Route::group(['middleware' => 'web'], function(){
 
-  Route::get('/', function () {
-      return view('index');
-  });
-
   Route::get('/index', function () {
       return view('index');
   });
+
+// rota deve chamar um controler,
+//essa função será responsabilidade do controler Category
+ Route::get('/', function () {
+    $categories = \App\Category::get();
+    foreach ($categories as $category) {
+
+    }
+    return view('index', ['categories' => $category->name]);
+   });
+
 });
