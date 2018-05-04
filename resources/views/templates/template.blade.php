@@ -187,6 +187,7 @@
                       <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
                       <!-- Custom scripts for this template -->
                       <script src="{{asset('js/agency.js')}}"></script>
+                      <script src="{{asset('js/script.js')}}"></script>
 
                   </body>
               </html>

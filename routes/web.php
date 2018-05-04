@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,27 +12,23 @@
 |
 */
 
+/* Rotas de testes - Modificar conforme avanço */
 
 // a url ira conter o id do produto para ser passado para a pagina carregar correto
 Route::get('/product-page', function () {
     return view('product-page');
 });
 
+// liberado apenas para quando não estiver logado
+Route::get('/register', function () {
+    return view('register');
+});
+
+/* ************* */
+
 
 Route::group(['middleware' => 'web'], function(){
 
-  Route::get('/index', function () {
-      return view('index');
-  });
-
-// rota deve chamar um controler,
-//essa função será responsabilidade do controler Category
- Route::get('/', function () {
-    $categories = \App\Category::get();
-    foreach ($categories as $category) {
-
-    }
-    return view('index', ['categories' => $category->name]);
-   });
+  Route::get('/', 'ProductsController@index');
 
 });
