@@ -19,10 +19,12 @@ Route::get('/product-page', function () {
     return view('product-page');
 });
 
-// liberado apenas para quando não estiver logado
+// liberar apenas para quando não estiver logado
 Route::get('/register', function () {
-    return view('register');
+    return view('register-consumer');
 });
+
+Route::resource('register-consumer', 'ConsumerController');
 
 /* ************* */
 

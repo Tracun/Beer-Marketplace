@@ -15,7 +15,7 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id')->unsigned();
-            $table->integer('id_vendor');
+            $table->integer('id_provider');
             $table->string('name', 30);
             $table->double('price', 3, 2);
             $table->text('descr');
@@ -23,22 +23,20 @@ class CreateProductsTable extends Migration
             $table->integer('IBU');
             $table->integer('ABV');
             $table->integer('id_nationality')->unsigned();
+            $table->string('img');
             $table->timestamps();
         });
 
         Schema::table('products', function ($table) {
-            $table->foreign('id_category')->references('id')->on('categories');
-            // $table->foreign('id_flavor')->references('id')->on('flavors');
+            $table->foreign('id_category')->references('id')->on('categories');            
         });
 
-        // Schema::table('products', function ($table) {
-        //     $table->foreign('id_flavor')->references('id')->on('flavors');
-        // });
+
     }
 
     /**
      * Reverse the migrations.
-     *
+     *p0
      * @return void
      */
     public function down()
