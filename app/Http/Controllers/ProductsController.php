@@ -49,17 +49,19 @@ class ProductsController extends Controller
       $this-> validate($request, [
         'name'            =>  'required',
         'price'           =>  'required',
-        'descr'           =>  'required',
-        'id_category'     =>  'required',
-        'IBU'             =>  'required',
-        'ABV'             =>  'required',
-        'id_nationality'  =>  'required',
-        'img'             =>  'required'
+        'desc'            =>  'required',
+        'category'        =>  'required',
+        'ibu'             =>  'required',
+        'abv'             =>  'required',
+        'nationality'     =>  'required',
+        'imageProduct'    =>  'required'
       ]);
 
       $product = new Product([
+        
         'name'            =>   $request->get('name'),
         'price'           =>   $request->get('price'),
+        'id_vendor'       =>   2,
         'descr'           =>   $request->get('desc'),
         'id_category'     =>   $request->get('category'),
         'IBU'             =>   $request->get('ibu'),

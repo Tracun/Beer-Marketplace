@@ -15,7 +15,7 @@
                     <input type="text" class="form-control" id="name" name="name" required autofocus>
 
                     <label for="Preço">Preço: *</label>
-                    <input type="number" class="form-control" id="price" name="price" required>
+                    <input type="text" class="form-control" id="price" name="price" required>
 
                     <label for="Descrição">Descrição: *</label>
                     <input type="text" class="form-control" id="desc" name="desc" required>
@@ -46,7 +46,7 @@
                     <input type="text" class="form-control" id="imageProduct" name="imageProduct" required>
 
                     <br><br>
-                    <button class="btn btn-primary btnCad" type="submit">Cadastrar</button>
+                    <input class="btn btn-primary btnCad" type="submit" value="Cadastrar">
                   </div>
 
             </form>

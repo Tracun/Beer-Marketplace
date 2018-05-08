@@ -22,11 +22,11 @@
               <div class="form-group">
                 <div class="form-row">
                     <div class="col-md-5">
-                        <label for="first_name" class="required">Nome <em>*</em></label>
+                        <label for="first_name" class="required">Nome do responsavel: <em>*</em></label>
                         <input class="form-control" id="first_name" name="first_name" type="text" aria-describedby="nameHelp" placeholder="Rogerinho" required="required">
                     </div>
                     <div class="col-md-7">
-                        <label for="last_name" class="required">Sobrenome <em>*</em></label>
+                        <label for="last_name" class="required">Razão social: <em>*</em></label>
                         <input class="form-control" id="last_name"  name="last_name" type="text" aria-describedby="nameHelp" placeholder="do Ingá" required="required">
                     </div>
                 </div>
@@ -34,15 +34,14 @@
             <div class="form-group">
                 <div class="form-row">
                     <div class="col-md-6">
-                        <label for="email" class="required">Email <em>*</em></label>
-                        <input class="form-control" id="email" name="email" type="email" aria-describedby="emailHelp" placeholder="lucas@seuemail.com.br" required="required">
+                        <label for="email" class="required">Nome de usuario:  <em>*</em></label>
+                        <input class="form-control" id="last_name" name="last_name" type="text" aria-describedby="nameHelp" placeholder="" required="required">
                     </div>
-                    <div class="col-md-6">
-                        <label for="confirm_email" class="required">Confirmar email <em>*</em></label>
-                        <input class="form-control" id="confirm_email" name="confirm_email" type="email" aria-describedby="emailHelp" placeholder="lucas@seuemail.com.br" required="required">
-                    </div>
-
-                </div>
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label for="email" class="required">E-mail:  <em>*</em></label>
+                            <input class="form-control" id="email" name="email" type="text" aria-describedby="emailHelp" placeholder="lucas@seuemail.com.br" required="required">
+                        </div>
             </div>
             <div class="form-group">
                 <div class="form-row">

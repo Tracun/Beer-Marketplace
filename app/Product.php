@@ -18,11 +18,7 @@ class Product extends Model
    * @var array
    */
   protected $fillable = [
-      'name','price', 'descr', 'id_category', 'IBU','ABV', 'id_nationality', 'img'
+      'name','price', 'id_vendor' ,'descr', 'id_category', 'IBU','ABV', 'id_nationality', 'img'
   ];
-}
 
-protected $hidden = [
-    'id_provider'
-];
 }
