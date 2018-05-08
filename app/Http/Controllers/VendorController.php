@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Provider;
+use App\Vendor;
 use Illuminate\Http\Request;
 
-class ProviderController extends Controller
+class VendorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class ProviderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Provider  $provider
+     * @param  \App\Vendor  $vendor
      * @return \Illuminate\Http\Response
      */
-    public function show(Provider $provider)
+    public function show(Vendor $vendor)
     {
         //
     }
@@ -52,10 +52,10 @@ class ProviderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Provider  $provider
+     * @param  \App\Vendor  $vendor
      * @return \Illuminate\Http\Response
      */
-    public function edit(Provider $provider)
+    public function edit(Vendor $vendor)
     {
         //
     }
@@ -64,10 +64,10 @@ class ProviderController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Provider  $provider
+     * @param  \App\Vendor  $vendor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Provider $provider)
+    public function update(Request $request, Vendor $vendor)
     {
         //
     }
@@ -75,10 +75,10 @@ class ProviderController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Provider  $provider
+     * @param  \App\Vendor  $vendor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Provider $provider)
+    public function destroy(Vendor $vendor)
     {
         //
     }

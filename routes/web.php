@@ -26,6 +26,10 @@ Route::get('/register', function () {
 
 Route::resource('register-consumer', 'ConsumerController');
 
+// Registra vendedores
+Route::get('/register-vendors', function () {
+    return view('register-vendors');
+});
 
 // Registra produtos
 Route::get('/register-products', 'ShowFormProductsController@index');

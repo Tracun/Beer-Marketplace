@@ -15,7 +15,7 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id')->unsigned();
-            $table->integer('id_provider');
+            $table->integer('id_vendor');
             $table->string('name', 30);
             $table->integer('price');
             $table->text('descr');
@@ -30,6 +30,7 @@ class CreateProductsTable extends Migration
         Schema::table('products', function ($table) {
             $table->foreign('id_category')->references('id')->on('categories');
             $table->foreign('id_nationality')->references('id')->on('nationalities');
+            $table->foreign('id_vendor')->references('id')->on('vendors');
         });
 
 
