@@ -51,19 +51,19 @@ class Handler extends ExceptionHandler
         switch ($exception->getStatusCode()) {
 
            // not authorized
-           // case '403':
-           //     return \Response::view('errors.403',array(),403);
-           //     break;
+           case '403':
+               return \Response::view('error.page-error', ['error' => "403 FORBIDDEN"]);
+               break;
 
            // not found
            case '404':
-               return \Response::view('error.404');
+               return \Response::view('error.page-error', ['error' => "404 PAGE NOT FOUND"]);
                break;
 
            // internal error
-           // case '500':
-           //     return \Response::view('errors.500',array(),500);
-           //     break;
+           case '500':
+               return \Response::view('error.page-error', ['error' => "500 INTERNAL SERVER ERROR"]);
+               break;
 
            default:
                return $this->renderHttpException($exception);
