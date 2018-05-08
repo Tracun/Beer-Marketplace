@@ -47,7 +47,7 @@
                                 </button>
                                 <div class="dropdown-content ldropdown-content">
                                     <a href="login.html">Entrar</a>
-                                    <a href="register.html">Registre-se</a>
+                                    <a href="{{ url("register")}}">Registre-se</a>
                                 </div>
                             </div>
                         </li>

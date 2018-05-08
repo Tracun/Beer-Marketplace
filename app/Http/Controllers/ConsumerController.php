@@ -29,7 +29,7 @@ class ConsumerController extends Controller
      */
     public function create()
     {
-        //
+      //
     }
 
     /**

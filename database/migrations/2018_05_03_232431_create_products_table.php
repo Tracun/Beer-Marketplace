@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->increments('id')->unsigned();
             $table->integer('id_provider');
             $table->string('name', 30);
-            $table->double('price', 3, 2);
+            $table->integer('price');
             $table->text('descr');
             $table->integer('id_category')->unsigned();
             $table->integer('IBU');
@@ -28,7 +28,8 @@ class CreateProductsTable extends Migration
         });
 
         Schema::table('products', function ($table) {
-            $table->foreign('id_category')->references('id')->on('categories');            
+            $table->foreign('id_category')->references('id')->on('categories');
+            $table->foreign('id_nationality')->references('id')->on('nationalities');
         });
 
 

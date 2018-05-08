@@ -1,7 +1,7 @@
 <!--
 @author: Lucas Lacerda
 -->
-@extends("template")
+@extends("templates.template")
 
 @section('title', "Drink experience!")
 

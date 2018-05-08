@@ -1,5 +1,11 @@
 <?php
 
+/**
+*
+*  @author: Lucas Alves
+*
+*/
+
 namespace App\Http\Controllers;
 
 use App\Nationality;
@@ -19,6 +25,7 @@ class ProductsController extends Controller
       $countries = \App\Nationality::get();
 
       return view('index', ['categories' => $categories, 'countries' => $countries]);
+
     }
 
     /**
@@ -39,7 +46,31 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this-> validate($request, [
+        'name'            =>  'required',
+        'price'           =>  'required',
+        'descr'           =>  'required',
+        'id_category'     =>  'required',
+        'IBU'             =>  'required',
+        'ABV'             =>  'required',
+        'id_nationality'  =>  'required',
+        'img'             =>  'required'
+      ]);
+
+      $product = new Product([
+        'name'            =>   $request->get('name'),
+        'price'           =>   $request->get('price'),
+        'descr'           =>   $request->get('desc'),
+        'id_category'     =>   $request->get('category'),
+        'IBU'             =>   $request->get('ibu'),
+        'ABV'             =>   $request->get('abv'),
+        'id_nationality'  =>   $request->get('nationality'),
+        'img'             =>   $request->get('imageProduct')
+      ]);
+
+      $product->save();
+      echo "Cadastro efetuado com sucesso". "<br> <br>".
+      "<img src='https://goo.gl/fNfvk5' height='100' width='100' title='Sucesso!'>";
     }
 
     /**
