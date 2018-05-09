@@ -21,11 +21,7 @@ class ProductsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-      $categories = \App\Category::get();
-      $countries = \App\Nationality::get();
-
-      return view('index', ['categories' => $categories, 'countries' => $countries]);
-
+    
     }
 
     /**

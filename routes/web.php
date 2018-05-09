@@ -23,26 +23,26 @@ Route::get('/product-page', function () {
 Route::get('/register', function () {
     return view('register-consumer');
 });
-
 Route::resource('register-consumer', 'ConsumerController');
+
+
 
 // Registra vendedores
 Route::get('/register-vendors', function () {
     return view('register-vendors');
 });
 
+
 // Registra produtos
 Route::get('/register-products', 'ShowFormProductsController@index');
-
 Route::resource('products', 'ProductsController');
 
 
 
-/* ************* */
 
 
 Route::group(['middleware' => 'web'], function(){
 
-  Route::get('/', 'ProductsController@index');
+  Route::get('/', 'IndexController@showIndex');
 
 });
