@@ -9,6 +9,7 @@ namespace App\Http\Controllers;
 
 use App\Consumer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class ConsumerController extends Controller
 {
@@ -61,7 +62,7 @@ class ConsumerController extends Controller
         'first_name'  =>   $request->get('first_name'),
         'last_name'   =>   $request->get('last_name'),
         'email'       =>   $request->get('email'),
-        'password'    =>   $request->get('password'),
+        'password'    =>   Hash::make($request->get('password')),
         'cpf'         =>   $request->get('cpf'),
         'gender'      =>   $request->get('gender'),
         'date_born'   =>   $request->get('date_born'),

@@ -21,7 +21,7 @@
     <div class="list-group categoria">
       <div class="card-header">Estilos</div>
       @foreach ($categories as $category)
-      <a href="/index/{{$category->id}}" class="list-group-item categoria-item">{{ $category->name }}</a> @endforeach
+      <a href="/index/categoria/{{$category->id}}" class="list-group-item categoria-item">{{ $category->name }}</a> @endforeach
 
 
 
@@ -31,7 +31,7 @@
     <div class="list-group categoria">
       <div class="card-header">Nacionalidade</div>
       @foreach ($countries as $country)
-      <a href="/index/origem/{{$country->id}}" class="list-group-item categoria-item">{{$country->country}}</a> @endforeach
+      <a href="/index/origem/{{$country->id}}" class="list-group-item categoria-item">{{$country->from}}</a> @endforeach
 
     </div>
 

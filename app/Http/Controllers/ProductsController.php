@@ -58,10 +58,10 @@ class ProductsController extends Controller
       ]);
 
       $product = new Product([
-        
+
         'name'            =>   $request->get('name'),
         'price'           =>   $request->get('price'),
-        'id_vendor'       =>   2,
+        'id_vendor'       =>   2, //pegar o user logado
         'descr'           =>   $request->get('desc'),
         'id_category'     =>   $request->get('category'),
         'IBU'             =>   $request->get('ibu'),

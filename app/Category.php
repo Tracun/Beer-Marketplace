@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Product;
 
 class Category extends Model{
     //
@@ -10,6 +11,8 @@ class Category extends Model{
         'name'
     ];
 
-    public $timestamps = true;
+    public function produtos(){
+      return $this->hasMany(Product::class);
+  }
 
 }

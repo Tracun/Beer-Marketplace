@@ -14,12 +14,12 @@ class CreateVendorsTable extends Migration
     public function up()
     {
         Schema::create('vendors', function (Blueprint $table) {
-          $table->increments('id');
+           $table->increments('id');
            $table->string('cnpj');
-           $table->string("razao_social");
-           $table->string("nome_fantasia");
-           $table->string('nome_responsavel');
-           $table->string('user_login');
+           $table->string("razao_social",50);
+           $table->string("nome_fantasia", 50);
+           $table->string('nome_responsavel', 50);
+           $table->string('user_login',15);
            $table->string('password');
            $table->string('email');
            $table->string('phone', 14);

@@ -9,13 +9,22 @@ class NationalitySeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
-      $nationality = [
-        0 => [
-        'country' => 'teste',
-      ]
-      ];
-      DB::table('nationalities')->insert($nationality);
+    public function run() {
+
+      $today = date('y-m-d G:i:s');
+
+      $nationalities= array('Brasil', 'Alemanha', 'Bélgica', 'Inlgaterra', 'EUA',
+       'Argentina', 'Uruguai' );
+
+      sort($nationalities);
+
+      foreach ($nationalities as $nationality){
+        DB::table('nationalities')->insert([
+            'from' => $nationality,
+            'created_at' => $today,
+            'updated_at' => $today
+          ]);
+      }
+
     }
 }

@@ -15,11 +15,11 @@ class CreateConsumersTable extends Migration
     {
         Schema::create('consumers', function (Blueprint $table) {
             // $table->increments('id')->unsigned();
-            $table->string('cpf');
-            $table->string("first_name");
-            $table->string("last_name");
-            $table->string('email');
-            $table->string('password');
+            $table->string('cpf', 15);
+            $table->string("first_name", 50);
+            $table->string("last_name",50);
+            $table->string('email', 100);
+            $table->string('password'); //limitar input form
             $table->string('gender');
             $table->date('date_born');
             $table->string('CEP', 9);
