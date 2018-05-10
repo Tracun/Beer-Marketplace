@@ -31,7 +31,7 @@
     <div class="list-group categoria">
       <div class="card-header">Nacionalidade</div>
       @foreach ($countries as $country)
-      <a href="/index/origem/{{$country->id}}" class="list-group-item categoria-item">{{$country->from}}</a> @endforeach
+      <a href="/index/origem/{{$country->id}}" class="list-group-item categoria-item">{{$country->country}}</a> @endforeach
 
     </div>
 
@@ -83,18 +83,20 @@
     </div>
 
     <div class="row">
+
+      @foreach($products as $product)
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="demo-3">
           <ul>
             <li>
               <figure>
                 <div>
-                  <img src="img/franziskaner.jpg" />
+                  <img src="ProductImage/{{$product->img}}" />
                 </div>
                 <a href='product-page.html'>
                   <figcaption>
-                    <h2>"Nome da Breja" <br>R$ 20,99 </h2>
-                    <p> Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.</p>
+                    <h2>{{$product->name}} <br>R$ {{$product->price}} </h2>
+                    <p> {{$product->descr}}</p>
                     <br>
                     <button type="button" class="btn btn-primary btn-block">Comprar</button>
                     <br>
@@ -106,6 +108,7 @@
           </ul>
         </div>
       </div>
+      @endforeach
 
 
     </div>

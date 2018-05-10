@@ -6,7 +6,7 @@
 
 <div class="container">
 
-            <form method="post" action="{{url('products')}}">
+            <form method="post" action="{{url('products')}}" enctype="multipart/form-data">
               {{csrf_field()}}
                 <div class="form-group">
 
@@ -43,7 +43,7 @@
                     <br>
                     <label for="Selecionar imagem do Produto:">Selecionar imagem do Produto: *</label>
                     <br>
-                    <input type="text" class="form-control" id="imageProduct" name="imageProduct" required>
+                    <input type="file" class="form-control" id="image" name="image" required>
 
                     <br><br>
                     <input class="btn btn-primary btnCad" type="submit" value="Cadastrar">

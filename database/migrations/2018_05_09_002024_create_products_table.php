@@ -15,11 +15,12 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_vendor')->unsigned();
+            $table->unsignedInteger('id_vendor');
             $table->string('name', 30);
             $table->integer('price');
             $table->text('descr');
-            $table->integer('id_category')->unsigned();
+            $table->unsignedInteger('id_category');
+            $table->unsignedInteger('quant');
             $table->integer('IBU');
             $table->integer('ABV');
             $table->unsignedInteger('id_nationality');
@@ -28,13 +29,16 @@ class CreateProductsTable extends Migration
 
             $table->foreign('id_vendor', 'vendor')
             ->references('id')->on('vendors')
-            ->onDelete('cascade');
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
             $table->foreign('id_category', 'category')
                ->references('id')->on('categories')
-               ->onDelete('cascade');
+               ->onDelete('cascade')
+               ->onUpdate('cascade');
             $table->foreign('id_nationality', 'nationality')
                 ->references('id')->on('nationalities')
-                ->onDelete('cascade');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
 
 

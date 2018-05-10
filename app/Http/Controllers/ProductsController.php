@@ -12,6 +12,8 @@ use App\Nationality;
 use App\Product;
 use App\Category;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Input;
 
 class ProductsController extends Controller
 {
@@ -21,7 +23,7 @@ class ProductsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-    
+
     }
 
     /**
@@ -34,7 +36,7 @@ class ProductsController extends Controller
         //
     }
 
-    /**
+      /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -50,26 +52,37 @@ class ProductsController extends Controller
         'ibu'             =>  'required',
         'abv'             =>  'required',
         'nationality'     =>  'required',
-        'imageProduct'    =>  'required'
+        'image'           =>  'required'
       ]);
 
-      $product = new Product([
 
+    if($request->hasFile('image')){
+        $imgname = $request->file('image')->getClientOriginalName();
+        $img = $request->file('image')->move(public_path().'/ProductImage', $imgname);
+
+
+      $product = new Product([
         'name'            =>   $request->get('name'),
         'price'           =>   $request->get('price'),
-        'id_vendor'       =>   2, //pegar o user logado
+        'id_vendor'       =>   1, //pegar o user logado
         'descr'           =>   $request->get('desc'),
+        'quant'           =>   2, //adicionar input
         'id_category'     =>   $request->get('category'),
         'IBU'             =>   $request->get('ibu'),
         'ABV'             =>   $request->get('abv'),
         'id_nationality'  =>   $request->get('nationality'),
-        'img'             =>   $request->get('imageProduct')
+        'img'             =>   $imgname
       ]);
 
       $product->save();
       echo "Cadastro efetuado com sucesso". "<br> <br>".
       "<img src='https://goo.gl/fNfvk5' height='100' width='100' title='Sucesso!'>";
-    }
+
+   }
+
+
+
+  }
 
     /**
      * Display the specified resource.

@@ -20,7 +20,7 @@ class NationalitySeeder extends Seeder
 
       foreach ($nationalities as $nationality){
         DB::table('nationalities')->insert([
-            'from' => $nationality,
+            'country' => $nationality,
             'created_at' => $today,
             'updated_at' => $today
           ]);
