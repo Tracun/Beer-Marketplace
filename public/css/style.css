@@ -103,4 +103,11 @@ and open the template in the editor.
     transform:rotateY(0)
 }
 
+#validarSenha, #validarEmail, #validarCNPJ, #validarCPF {
+  color: red;
+  font-size: 11px;
+}
 
+#desc {
+  height: 150px;
+}

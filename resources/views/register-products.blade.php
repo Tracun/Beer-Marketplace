@@ -3,53 +3,99 @@
 @section('title', "Cadastro de Produtos")
 
 @section('content')
+<div class="col-md-2"></div>
 
-<div class="container">
+<!-- <div class="container"> -->
+
+  <div class="card card-register mx-auto mt-5 col-md-8">
+      <div class="card-header">Cadastre seu produto
+      </div>
+
+      <div class="card-body">
 
             <form method="post" action="{{url('products')}}" enctype="multipart/form-data">
               {{csrf_field()}}
-                <div class="form-group">
 
-                    <br><br>
-                    <label for="Nome">Nome: *</label>
-                    <input type="text" class="form-control" id="name" name="name" required autofocus>
 
-                    <label for="Preço">Preço: *</label>
-                    <input type="text" class="form-control" id="price" name="price" required>
+              <div class="form-group">
+                    <div class="form-row">
+                         <div class="col-md-12">
+                           <label for="Imagem">Imagem: *</label>
+                           <br>
+                           <input type="file" class="form-control" id="image" name="image" required>
+                         </div>
+                       </div>
+                     </div>
 
-                    <label for="Descrição">Descrição: *</label>
-                    <input type="text" class="form-control" id="desc" name="desc" required>
+              <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                          <label for="Nome">Nome: *</label>
+                          <input type="text" class="form-control" id="name" name="name" required autofocus>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="Preço">Preço: *</label>
+                          <input type="text" class="form-control" id="price" name="price" required>
+                        </div>
+                        <div class="col-md-2">
+                          <label for="Preço">Quantidade: *</label>
+                          <input type="number" class="form-control" id="quant" name="quant" required>
+                        </div>
+                      </div>
+                    </div>
 
-                    <label for="Categoria">Categoria: *</label>
-                    <select class="form-control" id="category" name="category" required>
-                      @foreach ($categories as $category)
-                        <option value="{{$category->id}}">{{$category->name}}</option>
-                      @endforeach
-                    </select>
+              <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label for="Categoria">Categoria: *</label>
+                            <select class="form-control" id="category" name="category" required>
+                            @foreach ($categories as $category)
+                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Nacionalidade">Nacionalidade: *</label>
+                            <select class="form-control" id="nationality" name="nationality" required>
+                            @foreach ($countries as $country)
+                            <option value="{{$country->id}}">{{$country->country}}</option>
+                            @endforeach
+                            </select>
+                        </div>
+                      </div>
+                    </div>
 
-                    <label for="Nacionalidade">Nacionalidade: *</label>
-                    <select class="form-control" id="nationality" name="nationality" required>
-                        @foreach ($countries as $country)
-                          <option value="{{$country->id}}">{{$country->country}}</option>
-                        @endforeach
-                    </select>
+              <div class="form-group">
+                    <div class="form-row">
+                          <div class="col-md-6">
+                              <label for="IBU">IBU: *</label>
+                              <input type="number" class="form-control" id="ibu" name="ibu" required>
+                            </div>
+                            <div class="col-md-6">
+                              <label for="IBU">ABV: *</label>
+                              <input type="number" class="form-control" id="abv" name="abv" required>
+                          </div>
+                        </div>
+                      </div>
 
-                    <label for="IBU">IBU: *</label>
-                    <input type="number" class="form-control" id="ibu" name="ibu" required>
+              <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-12">
+                              <label for="Descrição">Descrição: *</label>
+                              <textarea type="text" class="form-control" id="desc" name="desc" required></textarea>
+                        </div>
+                      </div>
+                    </div>
 
-                    <label for="IBU">ABV: *</label>
-                    <input type="number" class="form-control" id="abv" name="abv" required>
+              <input type="submit"  data-popup-open="popup-1" value="Finalizar cadastro" class="btn btn-primary btn-block">
 
-                    <br>
-                    <label for="Selecionar imagem do Produto:">Selecionar imagem do Produto: *</label>
-                    <br>
-                    <input type="file" class="form-control" id="image" name="image" required>
-
-                    <br><br>
-                    <input class="btn btn-primary btnCad" type="submit" value="Cadastrar">
+                  <div class="text-center">
+                      <a class="d-block small mt-3" href="#">Voltar ao Dashboard</a>
                   </div>
 
             </form>
-
           </div>
+        </div>
+
+        <div class="col-md-2"></div>
 @endsection

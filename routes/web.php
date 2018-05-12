@@ -28,17 +28,15 @@ Route::resource('register-consumer', 'ConsumerController');
 
 
 // Registra vendedores
-Route::get('/register-vendors', function () {
+Route::get('/register-vendor', function () {
     return view('register-vendors');
 });
+Route::resource('register-vendors', 'VendorController');
 
 
 // Registra produtos
 Route::get('/register-products', 'ShowFormProductsController@index');
 Route::resource('products', 'ProductsController');
-
-
-
 
 
 Route::group(['middleware' => 'web'], function(){

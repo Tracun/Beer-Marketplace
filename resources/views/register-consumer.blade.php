@@ -16,18 +16,18 @@
         </div>
 
         <div class="card-body">
-          <form action="{{url('register-consumer')}}" method="post">
+          <form action="{{url('register-consumer')}}" method="post" onsubmit="return funcValidaConsumer(this);">
             {{csrf_field()}}
 
               <div class="form-group">
                 <div class="form-row">
                     <div class="col-md-5">
                         <label for="first_name" class="required">Nome <em>*</em></label>
-                        <input class="form-control" id="first_name" name="first_name" type="text" aria-describedby="nameHelp" placeholder="Rogerinho" required="required">
+                        <input class="form-control" id="first_name" name="first_name" type="text" aria-describedby="nameHelp" placeholder="Rogerinho" required="required" maxlength="50">
                     </div>
                     <div class="col-md-7">
                         <label for="last_name" class="required">Sobrenome <em>*</em></label>
-                        <input class="form-control" id="last_name"  name="last_name" type="text" aria-describedby="nameHelp" placeholder="do Ingá" required="required">
+                        <input class="form-control" id="last_name"  name="last_name" type="text" aria-describedby="nameHelp" placeholder="do Ingá" required="required" maxlength="50">
                     </div>
                 </div>
             </div>
@@ -35,11 +35,12 @@
                 <div class="form-row">
                     <div class="col-md-6">
                         <label for="email" class="required">Email <em>*</em></label>
-                        <input class="form-control" id="email" name="email" type="email" aria-describedby="emailHelp" placeholder="lucas@seuemail.com.br" required="required">
+                        <input class="form-control" id="email" name="email" type="email" aria-describedby="emailHelp" placeholder="lucas@seuemail.com.br" required="required"onblur="validarEmail()">
                     </div>
                     <div class="col-md-6">
                         <label for="confirm_email" class="required">Confirmar email <em>*</em></label>
-                        <input class="form-control" id="confirm_email" name="confirm_email" type="email" aria-describedby="emailHelp" placeholder="lucas@seuemail.com.br" required="required">
+                        <input class="form-control" id="confirm_email" name="confirm_email" type="email" aria-describedby="emailHelp" placeholder="lucas@seuemail.com.br" required="required" onblur="validarEmail()">
+                        <p id="validarEmail"></P>
                     </div>
 
                 </div>
@@ -48,11 +49,12 @@
                 <div class="form-row">
                     <div class="col-md-6">
                         <label for="password" class="required">Senha <em>*</em></label>
-                        <input class="form-control" id="password" name="password" type="password" placeholder="Senha">
+                        <input class="form-control" id="password" name="password" type="password" placeholder="Senha" onblur="return validarSenha()" maxlength="8">
                     </div>
                     <div class="col-md-6">
                         <label for="confirm_password" class="required">Confirmar senha <em>*</em></label>
-                        <input class="form-control" id="confirm_password" name="confirm_password" type="password" placeholder="Confirme sua senha">
+                        <input class="form-control" id="confirm_password" name="confirm_password" type="password" placeholder="Confirme sua senha" onblur="return validarSenha();" maxlength="8">
+                        <p id="validarSenha"></P>
                     </div>
                 </div>
             </div>
@@ -61,7 +63,8 @@
                 <div class="form-row">
                     <div class="col-md-4">
                         <label for="cpf">CPF <em>*</em></label>
-                        <input class="form-control" id="cpf" name="cpf" type="text" placeholder="123.456.789-11" onkeyup="FormatCPF(this, event)" onkeypress="return onlyNum(event)" maxlength="15" required="required">
+                        <input class="form-control" id="cpf" name="cpf" type="text" placeholder="123.456.789-11" onblur="return validarCPF()" onkeypress="return onlyNum(event)" maxlength="11" required="required">
+                        <p id="validarCPF"></P>
                     </div>
 
                     <div class="dropdown col-md-4">
@@ -76,7 +79,7 @@
 
                     <div class="col-md-4">
                         <label for="date_born" class="required">Data de nascimento <em>*</em></label>
-                        <input class="form-control" id="date_born"  name="date_born" type="text" maxlength="10" placeholder="DD/MM/AAAA" required="required">
+                        <input class="form-control" id="date_born"  name="date_born" type="date" maxlength="10" placeholder="DD/MM/AAAA" required="required">
                     </div>
                 </div>
             </div>
@@ -107,11 +110,11 @@
                     </div>
                     <div class="col-md-2">
                         <label for="cidade" class="required">Cidade<em>*</em></label>
-                        <input class="form-control" id="cidade" name="cidade" type="text"  placeholder="" required="required">
+                        <input class="form-control" id="cidade" name="cidade" type="text"  placeholder="" required="required" maxlength="20">
                     </div>
                     <div class="col-md-2">
                         <label for="uf" class="required">UF<em>*</em></label>
-                        <input class="form-control" id="uf" name="uf" type="text"  placeholder="" required="required">
+                        <input class="form-control" id="uf" name="uf" type="text"  placeholder="" required="required" maxlength="2">
                     </div>
 
                     <div class="col-md-3">
