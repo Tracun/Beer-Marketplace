@@ -12,19 +12,25 @@ class VendorSeeder extends Seeder
     public function run()
     {
 
-        $today = date('y-m-d G:i:s');
+      $today = date('y-m-d G:i:s');
 
-      DB::table('vendors')->insert([
-          'cnpj'              => '12345678912345',
-          'razao_social'      => 'T3L',
-          'nome_fantasia'     => 'T3L',
-          'nome_responsavel'  => 'Lucas',
-          'user_login'        => 'Lucaaslb',
-          'password'          => '123456',
-          'email'             => 't3l@t3l.com',
-          'phone'             => '12345678901234',
-          'created_at'        => $today,
-          'updated_at'        => $today
-        ]);
+    DB::table('vendors')->insert([
+        'cnpj'              => '12345678912345',
+        'razao_social'      => 'T3L',
+        'nome_fantasia'     => 'T3L',
+        'nome_responsavel'  => 'Lucas',
+        'user_login'        => 'Lucaaslb',
+        'password'          => '123456',
+        'email'             => 't3l@t3l.com',
+        'CEP'               => '12345678',
+        'endereco'          => 'teste',
+        'numEndereco'       => '123',
+        'bairro'            => 'teste',
+        'cidade'            => 'sao paulo',
+        'uf'                => 'sp',
+        'phone'             => '12345678901234',
+        'created_at'        => $today,
+        'updated_at'        => $today
+      ]);
     }
 }
