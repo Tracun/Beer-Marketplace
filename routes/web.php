@@ -21,7 +21,7 @@ Route::get('/product-page', function () {
 
 // liberar apenas para quando não estiver logado
 Route::get('/register', function () {
-    return view('register-consumer');
+    return view('forms.register-consumer');
 });
 Route::resource('register-consumer', 'ConsumerController');
 
@@ -29,7 +29,7 @@ Route::resource('register-consumer', 'ConsumerController');
 
 // Registra vendedores
 Route::get('/register-vendor', function () {
-    return view('register-vendors');
+    return view('forms.register-vendors');
 });
 Route::resource('register-vendors', 'VendorController');
 

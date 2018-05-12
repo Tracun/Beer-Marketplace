@@ -5,8 +5,6 @@
 @section('content')
 <div class="col-md-2"></div>
 
-<!-- <div class="container"> -->
-
   <div class="card card-register mx-auto mt-5 col-md-8">
       <div class="card-header">Cadastre seu produto
       </div>
@@ -20,7 +18,7 @@
               <div class="form-group">
                     <div class="form-row">
                          <div class="col-md-12">
-                           <label for="Imagem">Imagem: *</label>
+                           <label for="image">Imagem: *</label>
                            <br>
                            <input type="file" class="form-control" id="image" name="image" required>
                          </div>
@@ -30,18 +28,36 @@
               <div class="form-group">
                     <div class="form-row">
                         <div class="col-md-6">
-                          <label for="Nome">Nome: *</label>
-                          <input type="text" class="form-control" id="name" name="name" required autofocus>
+                          <label for="maker">Fabricante: *</label>
+                          <input type="text" class="form-control" id="maker" name="maker" required autofocus>
                         </div>
-                        <div class="col-md-4">
-                          <label for="Preço">Preço: *</label>
-                          <input type="text" class="form-control" id="price" name="price" required>
-                        </div>
-                        <div class="col-md-2">
-                          <label for="Preço">Quantidade: *</label>
-                          <input type="number" class="form-control" id="quant" name="quant" required>
+                        <div class="col-md-6">
+                          <label for="name">Nome: *</label>
+                          <input type="text" class="form-control" id="name" name="name" required>
                         </div>
                       </div>
+                    </div>
+
+                    <div class="form-group">
+                          <div class="form-row">
+                        <div class="col-md-3">
+                          <label for="ml">ml: *</label>
+                          <input type="number" class="form-control" id="ml" name="ml" required>
+                        </div>
+                        <div class="col-md-3">
+                          <label for="price">Preço: *</label>
+                          <input type="text" class="form-control" id="price" name="price" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="ibu">IBU: *</label>
+                            <input type="number" class="form-control" id="ibu" name="ibu" required>
+                          </div>
+                          <div class="col-md-3">
+                            <label for="abv">ABV: % *</label>
+                            <input type="number" class="form-control" id="abv" name="abv" required>
+                          </div>
+                      </div>
+
                     </div>
 
               <div class="form-group">
@@ -65,18 +81,19 @@
                       </div>
                     </div>
 
-              <div class="form-group">
-                    <div class="form-row">
-                          <div class="col-md-6">
-                              <label for="IBU">IBU: *</label>
-                              <input type="number" class="form-control" id="ibu" name="ibu" required>
-                            </div>
-                            <div class="col-md-6">
-                              <label for="IBU">ABV: *</label>
-                              <input type="number" class="form-control" id="abv" name="abv" required>
-                          </div>
-                        </div>
-                      </div>
+
+                      <div class="form-group">
+                            <div class="form-row">
+                                  <div class="col-md-10">
+                                      <label for="ingredients">Ingredientes: *</label>
+                                      <input type="text" class="form-control" id="ingredients" name="ingredients" maxlenth="100" required>
+                                    </div>
+                                    <div class="col-md-2">
+                                      <label for="stock">Estoque: *</label>
+                                      <input type="number" class="form-control" id="stock" name="stock" required>
+                                    </div>
+                                  </div>
+                              </div>
 
               <div class="form-group">
                     <div class="form-row">

@@ -45,14 +45,18 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
       $this-> validate($request, [
+        'image'           =>  'required',
+        'maker'           =>  'required',
         'name'            =>  'required',
+        'ml'              =>  'required',
         'price'           =>  'required',
-        'desc'            =>  'required',
-        'category'        =>  'required',
         'ibu'             =>  'required',
         'abv'             =>  'required',
+        'category'        =>  'required',
         'nationality'     =>  'required',
-        'image'           =>  'required'
+        'ingredients'     =>  'required',
+        'stock'           =>  'required',
+        'desc'            =>  'required',
       ]);
 
 
@@ -62,15 +66,18 @@ class ProductsController extends Controller
 
 
       $product = new Product([
+        'id_vendor'       =>   1, //pegar o user logado
+        'maker'           =>   $request->get('maker'),
         'name'            =>   $request->get('name'),
         'price'           =>   $request->get('price'),
-        'id_vendor'       =>   1, //pegar o user logado
-        'descr'           =>   $request->get('desc'),
-        'quant'           =>   2, //adicionar input
         'id_category'     =>   $request->get('category'),
+        'ml'              =>   $request->get('ml'),
         'IBU'             =>   $request->get('ibu'),
         'ABV'             =>   $request->get('abv'),
         'id_nationality'  =>   $request->get('nationality'),
+        'stock'           =>   $request->get('stock'),
+        'ingredients'     =>   $request->get('ingredients'),
+        'descr'           =>   $request->get('desc'),
         'img'             =>   $imgname
       ]);
 

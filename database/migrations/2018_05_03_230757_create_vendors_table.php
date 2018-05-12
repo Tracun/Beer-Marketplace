@@ -31,7 +31,11 @@ class CreateVendorsTable extends Migration
            $table->string('phone', 14);
            $table->rememberToken();
            $table->timestamps();
+
+    //       $table->primary('cnpj'); // problemas com id e  cnpj, ainda em decisão
         });
+
+
     }
 
     /**

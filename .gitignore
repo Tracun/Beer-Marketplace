@@ -12,5 +12,5 @@ npm-debug.log
 yarn-error.log
 .env
 !OLD
-/!OLD
+!OLD/*
 /nbproject/private/

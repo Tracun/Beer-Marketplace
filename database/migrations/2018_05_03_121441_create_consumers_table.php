@@ -14,7 +14,6 @@ class CreateConsumersTable extends Migration
     public function up()
     {
         Schema::create('consumers', function (Blueprint $table) {
-            // $table->increments('id')->unsigned();
             $table->string('cpf', 14);
             $table->string("first_name", 50);
             $table->string("last_name",50);
@@ -32,6 +31,8 @@ class CreateConsumersTable extends Migration
             $table->string('mobile', 14);
             $table->rememberToken();
             $table->timestamps();
+
+            $table->primary('cpf');
         });
     }
 

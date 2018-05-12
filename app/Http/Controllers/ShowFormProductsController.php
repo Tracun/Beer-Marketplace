@@ -22,7 +22,7 @@ class ShowFormProductsController extends Controller
       $categories = \App\Category::get();
       $countries = \App\Nationality::get();
 
-      return view('register-products', ['categories' => $categories, 'countries' => $countries]);
+      return view('forms.register-products', ['categories' => $categories, 'countries' => $countries]);
     }
 
     /**

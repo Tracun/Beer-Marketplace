@@ -17,13 +17,16 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('id_vendor');
             $table->string('name', 30);
+            $table->string('maker', 30);
             $table->integer('price');
-            $table->text('descr');
             $table->unsignedInteger('id_category');
-            $table->unsignedInteger('quant');
+            $table->unsignedInteger('ml');
             $table->integer('IBU');
             $table->integer('ABV');
             $table->unsignedInteger('id_nationality');
+            $table->unsignedInteger('stock');
+            $table->string('ingredients',100);
+            $table->text('descr');
             $table->string('img');
             $table->timestamps();
 
@@ -41,11 +44,11 @@ class CreateProductsTable extends Migration
                 ->onUpdate('cascade');
         });
 
-        Schema::table('products', function ($table) {
-            $table->foreign('id_category')->references('id')->on('categories');
-            $table->foreign('id_nationality')->references('id')->on('nationalities');
-            $table->foreign('id_vendor')->references('id')->on('vendors');
-        });
+        // Schema::table('products', function ($table) {
+        //     $table->foreign('id_category')->references('id')->on('categories');
+        //     $table->foreign('id_nationality')->references('id')->on('nationalities');
+        //     $table->foreign('id_vendor')->references('id')->on('vendors');
+        // });
     }
 
     /**
