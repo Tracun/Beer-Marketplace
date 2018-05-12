@@ -66,7 +66,7 @@ class ConsumerController extends Controller
         'cpf'         =>   $request->get('cpf'),
         'gender'      =>   $request->get('gender'),
         'date_born'   =>   $request->get('date_born'),
-        'CEP'         =>   $request->get('cep'),
+        'cep'         =>   $request->get('cep'),
         'endereco'    =>   $request->get('endereco'),
         'numEndereco' =>   $request->get('numEndereco'),
         'bairro'      =>   $request->get('bairro'),

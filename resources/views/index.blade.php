@@ -93,7 +93,7 @@
                 <div>
                   <img src="ProductImage/{{$product->img}}" />
                 </div>
-                <a href='product-page.html'>
+                <a href='product-page'>
                   <figcaption>
                     <h2>{{$product->name}} <br>R$ {{$product->price}} </h2>
                     <p> {{$product->descr}}</p>

@@ -41,8 +41,6 @@ class CreateProductsTable extends Migration
                 ->onUpdate('cascade');
         });
 
-
-
         Schema::table('products', function ($table) {
             $table->foreign('id_category')->references('id')->on('categories');
             $table->foreign('id_nationality')->references('id')->on('nationalities');

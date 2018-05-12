@@ -13,10 +13,8 @@ class Consumer extends Model{
    * @var array
    */
   protected $fillable = [
-      'cpf', 'first_name','last_name', 'email', 'password','gender', 'date_born', 'CEP', 'endereco', 'numEndereco',
+      'cpf', 'first_name','last_name', 'email', 'password','gender', 'date_born', 'cep', 'endereco', 'numEndereco',
       'bairro', 'cidade', 'uf', 'phone', 'mobile'
   ];
-
-
 
 }

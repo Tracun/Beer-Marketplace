@@ -36,7 +36,45 @@ class VendorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this-> validate($request, [
+        'cnpj'                =>  'required',
+        'razao_social'        =>  'required',
+        'nome_fantasia'       =>  'required',
+        'nome_responsavel'    =>  'required',
+        'user_login'          =>  'required',
+        'password'            =>  'required',
+        'email'               =>  'required',
+        'cep'                 =>  'required',
+        'endereco'            =>  'required',
+        'numEndereco'         =>  'required',
+        'bairro'              =>  'required',
+        'cidade'              =>  'required',
+        'uf'                  =>  'required',
+        'phone'               =>  'required'
+
+      ]);
+
+      $vendor = new Vendor([
+        'cnpj'                =>   $request->get('cnpj'),
+        'razao_social'        =>   $request->get('razao_social'),
+        'nome_fantasia'       =>   $request->get('nome_fantasia'),
+        'nome_responsavel'    =>   $request->get('nome_responsavel'),
+        'user_login'          =>   $request->get('user_login'),
+        'password'            =>   Hash::make($request->get('password')),
+        'email'               =>   $request->get('email'),
+        'CEP'                 =>   $request->get('cep'),
+        'endereco'            =>   $request->get('endereco'),
+        'numEndereco'         =>   $request->get('numEndereco'),
+        'bairro'              =>   $request->get('bairro'),
+        'cidade'              =>   $request->get('cidade'),
+        'uf'                  =>   $request->get('uf'),
+        'phone'               =>   $request->get('phone')
+      ]);
+
+      $vendor->save();
+      echo "Cadastro efetuado com sucesso". "<br> <br>".
+      "<img src='https://goo.gl/fNfvk5' height='100' width='100' title='Sucesso!'>";
+
     }
 
     /**
