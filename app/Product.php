@@ -22,8 +22,9 @@ class Product extends Model
    */
   protected $fillable = [
     'id_vendor' ,'maker', 'name','price', 'id_category', 'ml', 'IBU','ABV',
-    'id_nationality', 'stock', 'ingredients', 'descr','img'
+    'id_nationality', 'stock', 'ingredients', 'introduction', 'descr','img'
   ];
+
 
 
   public function fornecedor(){

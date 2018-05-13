@@ -26,6 +26,7 @@ class CreateProductsTable extends Migration
             $table->unsignedInteger('id_nationality');
             $table->unsignedInteger('stock');
             $table->string('ingredients',100);
+            $table->string('introduction', 80)->default(" ");
             $table->text('descr');
             $table->string('img');
             $table->timestamps();

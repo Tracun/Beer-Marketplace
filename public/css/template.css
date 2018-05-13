@@ -74,6 +74,8 @@ section h3.section-subheading {
     background-color: #fec810 !important;
     border-color: #fec810 !important;
     color: white;
+    font-weight: 900;
+
 }
 
 .btn-primary:active, .btn-primary:focus {

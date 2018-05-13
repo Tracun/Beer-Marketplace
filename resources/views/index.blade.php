@@ -91,16 +91,15 @@
             <li>
               <figure>
                 <div>
-                  <img src="ProductImage/{{$product->img}}" />
+                  <img src="{{ asset('storage/ProductImage')}}/{{$product->img}}" />
                 </div>
-                <a href='product-page'>
+                <a href='product-page/{{$product->id}}'>
                   <figcaption>
-                    <h2>{{$product->name}} <br>R$ {{$product->price}} </h2>
-                    <p> {{$product->descr}}</p>
+                    <h2>{{$product->name}}</h2><h3>R$ {{$product->price}} </h3>
+                    <!-- <p> {{$product->descr}}</p> -->
                     <br>
-                    <button type="button" class="btn btn-primary btn-block">Comprar</button>
-                    <br>
-                    <button type="button" class="btn btn-primary btn-block">Add. Carrinho</button>
+                    <a class="btn btn-primary btn-block">Comprar</a>
+                    <a class="btn btn-primary btn-block">Add. Carrinho</a>
                   </figcaption>
                 </a>
               </figure>

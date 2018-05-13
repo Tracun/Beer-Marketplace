@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +15,6 @@ use App\Http\Controllers\CategoryController;
 
 /* Rotas de testes - Modificar conforme avanço */
 
-// a url ira conter o id do produto para ser passado para a pagina carregar correto
-Route::get('/product-page', function () {
-    return view('product-page');
-});
 
 // liberar apenas para quando não estiver logado
 Route::get('/register', function () {
@@ -42,5 +39,7 @@ Route::resource('products', 'ProductsController');
 Route::group(['middleware' => 'web'], function(){
 
   Route::get('/', 'IndexController@showIndex');
+
+  Route::get('/product-page/{product}', 'ProductsController@show');
 
 });

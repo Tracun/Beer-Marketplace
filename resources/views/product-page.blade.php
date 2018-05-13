@@ -11,20 +11,23 @@
 
                 <!-- /.col-lg-3 -->
 
-                <div class="col-lg-6">
+                <div class="col-lg-5 bg-ligth">
 
-                    <div class="card mt-2">
-                        <img class="card-img-top img-fluid" src="https://www.cervejariacolorado.com.br/files/cerveja/cerveja-demoseille.png" alt="">
-                        <h4 class="card-title text-center"> <br>Demoiselle</h4>
+                    <div class="card mt-2 img-product-page text-center">
+                        <img class="card-img-top img-fluid" src="{{ asset('storage/ProductImage')}}/{{$product->img}}" alt="">
+                        <h4 class="card-title text-center"> <br>{{$product->maker}} - {{$product->name}}</h4>
                     </div>
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-7">
                     <div class="card-body">
-                        <h3> Colorado Demoiselle 600ml </h3>
-                        <h4>17,99</h4>
+                        <h3>{{$product->name}} - {{$product->ml}}ml</h3>
+                        <h4>R${{$product->price}}</h4>
                         <p class="card-text">
-                            Esta cerveja Porter, robusta e carregada em aromas de café foi elaborada com ingredientres nacionais e importador
-                            da melhor qualidade, usando metodos artesanais e um toque de exotismo.
+                          {{$product->introduction}}
+                        </p>
+
+                        <p class="card-text">
+                          Vendido por: {{$vendor->nome_fantasia}}
                         </p>
                         <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
                         4.0 stars
@@ -32,7 +35,7 @@
                         <div class="row">
                             <div class="col-sm-4"><a href="#">Consultar frete </a></div>
                             <div class="col-sm-4"> </div>
-                            <div class="col-sm-4"> <a href="cart.html" class="btn btn-success">Comprar</a> </div>
+                            <div class="col-sm-4"> <a href="cart.html" class="btn btn-primary btn-block">Comprar</a> </div>
                         </div>
                     </div>
                 </div>
@@ -45,20 +48,15 @@
                         Sobre
                     </div>
                     <div class="card-body">
-                        <p>Fabricantes: Cervejaria Colorado</p>
-                        <p>Teor alcoólico: 6%</p>
-                        <p>Tipo: Porter com café, cerveja forte escura</p>
-                        <p>Ingredientes:Água, malte de cevada, café, lúpulo e fermento.</p>
-                        <p>Amargor Medio</p>
+                        <p>Fabricante: {{$product->maker}}</p>
+                        <p>ABV: {{$product->ABV}}%</p>
+                        <p>IBU: {{$product->IBU}} </p>
+                        <p>Tipo: {{$category->name}}</p>
+                        <p>Nacionalidade: {{$nationality->country}}</p>
+                        <p>Ingredientes: {{$product->ingredients}}</p>
+
                         </br>
-                        <p class="descricao"><h5>Descrição:</br></h5> Em homenagem a um avião inventado por Santos Dumont,
-                        chamado Demoiselle, a Colorado nomeou esta excelente cerveja estilo Porter.
-                        De coloração marrom escura, com uma espuma levemente avermelhada,
-                        a Colorado Demoiselle possui um aroma defumado marcante, acompanhado de café,
-                        maltes torrados e um leve amadeirado. Com um amargor bem equilibrado que trás
-                        junto um leve dulçor. Com corpo médio e média carbonatação possui um retrogosto amargo e seco prolongado.
-                        Possui teor alcoólico de 6%,
-                        esta cerveja harmoniza com chocolates, queijo parmesão e frutas vermelhas. Deve ser servida entre 8 a 12ºC</p>
+                        <p class="descricao"><h5>Descrição:</br></h5> {{$product->descr}} </p>
                         <small class="text-muted"></small>
                     </div>
                 </div>
