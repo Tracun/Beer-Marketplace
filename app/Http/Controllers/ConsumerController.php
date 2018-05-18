@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 use App\Consumer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Redirect;
 
 class ConsumerController extends Controller
 {
@@ -30,7 +31,7 @@ class ConsumerController extends Controller
      */
     public function create()
     {
-      //
+      return view('forms.register-consumer');
     }
 
     /**
@@ -77,8 +78,8 @@ class ConsumerController extends Controller
       ]);
 
       $consumer->save();
-      echo "Cadastro efetuado com sucesso". "<br> <br>".
-      "<img src='https://goo.gl/fNfvk5' height='100' width='100' title='Sucesso!'>";
+      \Session::flash('msg_sucess', 'Cadastro realizado com sucesso, faça seu login!');
+      return Redirect::to('/login');
     }
 
     /**

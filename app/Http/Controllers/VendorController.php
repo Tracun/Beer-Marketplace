@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Vendor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Redirect;
 
 class VendorController extends Controller
 {
@@ -72,9 +73,9 @@ class VendorController extends Controller
       ]);
 
       $vendor->save();
-      echo "Cadastro efetuado com sucesso". "<br> <br>".
-      "<img src='https://goo.gl/fNfvk5' height='100' width='100' title='Sucesso!'>";
 
+      \Session::flash('msg_sucess', 'Cadastro realizado com sucesso, faça seu login!');
+      return Redirect::to('/login');
     }
 
     /**

@@ -46,13 +46,13 @@
                                     <a class="nav-link js-scroll-trigger" href="#"><img src="img\profile.png" alt="Perfil" title="Perfil"/></i></a>
                                 </button>
                                 <div class="dropdown-content ldropdown-content">
-                                    <a href="login.html">Entrar</a>
+                                    <a href="{{ url("login")}}">Entrar</a>
                                     <a href="{{ url("register")}}">Registre-se</a>
                                 </div>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="cart.html"><img src="img\beer.png" alt="Cerveja"  data-toggle="tooltip" data-placement="top" title="Meu carrinho"/></a>
+                            <a class="nav-link js-scroll-trigger" href="cart.html"><img src="img\beer.png" alt="Carrinho"  data-toggle="tooltip" data-placement="top" title="Meu carrinho"/></a>
                         </li>
                     </ul>
                 </div>

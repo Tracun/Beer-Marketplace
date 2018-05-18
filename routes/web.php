@@ -17,12 +17,8 @@ use App\Http\Controllers\ProductsController;
 
 
 // liberar apenas para quando não estiver logado
-Route::get('/register', function () {
-    return view('forms.register-consumer');
-});
+Route::get('/register', 'ConsumerController@create');
 Route::resource('register-consumer', 'ConsumerController');
-
-
 
 // Registra vendedores
 Route::get('/register-vendor', function () {
@@ -42,4 +38,9 @@ Route::group(['middleware' => 'web'], function(){
 
   Route::get('/product-page/{product}', 'ProductsController@show');
 
+});
+
+
+Route::get('/login', function () {
+    return view('forms.login');
 });

@@ -5,13 +5,12 @@
 @section('content')
 <div class="col-md-2"></div>
 
-@if(\Session::has('success'))
-  <div class="alert alert-success">
-   <p>{{ \Session::get('success') }}</p>
-  </div>
-  @endif
-
     <div class="card card-register mx-auto mt-5 col-md-8">
+      @if(Session::has('msg_sucess'))
+        <div class="alert alert-sucess"> <img src="img/sucess.png" height="50" width="50" title="Sucesso!">
+           {{Session::get('msg_sucess')}}
+        </div>
+      @endif
         <div class="card-header">Faça seu cadastro
         </div>
 
