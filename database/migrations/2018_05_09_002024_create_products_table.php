@@ -16,8 +16,8 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('id_vendor');
-            $table->string('name', 30);
-            $table->string('maker', 30);
+            $table->string('name', 50);
+            $table->string('maker', 50);
             $table->integer('price');
             $table->unsignedInteger('id_category');
             $table->unsignedInteger('ml');
@@ -25,8 +25,8 @@ class CreateProductsTable extends Migration
             $table->integer('ABV');
             $table->unsignedInteger('id_nationality');
             $table->unsignedInteger('stock');
-            $table->string('ingredients',100);
-            $table->string('introduction', 80)->default(" ");
+            $table->string('ingredients',150);
+            $table->string('introduction', 200)->default(" ");
             $table->text('descr');
             $table->string('img');
             $table->timestamps();

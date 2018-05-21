@@ -243,6 +243,7 @@ header.masthead {
     -o-background-size: cover;
     background-size: cover;
     height: 320px;
+    margin-bottom: 15px;
 }
 
 header.masthead .intro-text {

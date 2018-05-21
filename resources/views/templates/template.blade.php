@@ -73,7 +73,7 @@
             <div class="container">
                 @yield('content')
 
-                      </div>
+            </div>
                       <!-- /.container -->
 
                       <!--Footer-->
@@ -87,6 +87,8 @@
                                   <div class="col-md-4">
                                       <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Sobre</h5>
                                       <p>Nós é pika e o resto é buraco</p>
+                                      <p><a class="btn-link" href="https://github.com/Tracun/Beer-Marketplace"> GITHUB  </a></p>
+                                      <p><a class="btn-link" href="product-list"> ADM  </a></p>
 
 
                                   </div>

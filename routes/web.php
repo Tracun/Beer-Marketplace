@@ -27,9 +27,7 @@ Route::get('/register-vendor', function () {
 Route::resource('register-vendors', 'VendorController');
 
 
-// Registra produtos
-Route::get('/register-products', 'ShowFormProductsController@index');
-Route::resource('products', 'ProductsController');
+
 
 
 Route::group(['middleware' => 'web'], function(){
@@ -38,9 +36,31 @@ Route::group(['middleware' => 'web'], function(){
 
   Route::get('/product-page/{product}', 'ProductsController@show');
 
+  // Registra produtos
+  Route::get('/register-product', 'ShowFormProductsController@index');
+
+  Route::get('/register-product/{product}/edit', 'ShowFormProductsController@edit');
+  Route::get('/product-list/{product}/delete', 'ProductsController@destroy');
+
+
+  Route::resource('products', 'ProductsController');
+
+  Route::get('/product-list', 'ProductsController@list')->name('list');
 });
 
 
 Route::get('/login', function () {
-    return view('forms.login');
+    return view('auth.login');
+});
+
+Route::get('/reset-password', function () {
+    return view('auth.reset-password');
+});
+
+Route::get('/forgot-password', function () {
+    return view('auth.forgot-password');
+});
+
+Route::get('/master', function () {
+    return view('adm.master');
 });

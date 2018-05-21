@@ -1,7 +1,7 @@
 <?php
 
 /**
-*
+*  @author: Lucas Lacerda
 *  @author: Lucas Alves
 *
 */
@@ -44,27 +44,27 @@ class ProductsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request){
+
       $this-> validate($request, [
-        'image'           =>  'required',
+        'img'             =>  'required',
         'maker'           =>  'required',
         'name'            =>  'required',
         'ml'              =>  'required',
         'price'           =>  'required',
-        'ibu'             =>  'required',
-        'abv'             =>  'required',
+        'IBU'             =>  'required',
+        'ABV'             =>  'required',
         'category'        =>  'required',
         'nationality'     =>  'required',
         'ingredients'     =>  'required',
         'stock'           =>  'required',
-        'desc'            =>  'required',
+        'descr'           =>  'required',
       ]);
 
 
-    if($request->hasFile('image')){
-        $imgname = $request->file('image')->getClientOriginalName();
-        $img = $request->file('image')->storeAs('public/ProductImage', $imgname);
+    if($request->hasFile('img')){
+        $imgname = $request->file('img')->getClientOriginalName();
+        $img = $request->file('img')->storeAs('public/ProductImage', $imgname);
 
 
       $product = new Product([
@@ -74,13 +74,13 @@ class ProductsController extends Controller
         'price'           =>   $request->get('price'),
         'id_category'     =>   $request->get('category'),
         'ml'              =>   $request->get('ml'),
-        'IBU'             =>   $request->get('ibu'),
-        'ABV'             =>   $request->get('abv'),
+        'IBU'             =>   $request->get('IBU'),
+        'ABV'             =>   $request->get('ABV'),
         'id_nationality'  =>   $request->get('nationality'),
         'stock'           =>   $request->get('stock'),
         'ingredients'     =>   $request->get('ingredients'),
         'introduction'    =>   $request->get('introduction'),
-        'descr'           =>   $request->get('desc'),
+        'descr'           =>   $request->get('descr'),
         'img'             =>   $imgname
       ]);
 
@@ -88,9 +88,7 @@ class ProductsController extends Controller
 
       \Session::flash('msg_sucess', 'Produto cadastrado com sucesso!');
 
-      return Redirect::to('register-products');
-
-
+      return Redirect::to('product-list');
    }
 
 
@@ -124,7 +122,7 @@ class ProductsController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+
     }
 
     /**
@@ -145,8 +143,20 @@ class ProductsController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
-    {
-        //
+    public function destroy($id){
+      $product = \App\Product::findOrFail($id);
+
+      $product->delete();
+
+      \Session::flash('msg_sucess', 'Produto '.$id.' excluido com sucesso!');
+
+      return Redirect::to('product-list');
+
+    }
+
+    public function list(){
+      $products = Product::get();
+
+      return view('adm.product-list', ['products' => $products]);
     }
 }

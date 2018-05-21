@@ -3,7 +3,6 @@
 -->
 @extends("templates.template")
 
-@section('title', "Drink experience!")
 
 @section('content')
 

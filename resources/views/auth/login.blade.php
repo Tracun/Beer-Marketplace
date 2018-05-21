@@ -128,11 +128,11 @@
                 <input type="password" id="password" class="password" />
             </div>
             <div class="inputGroup inputGroup3">
-                <button id="login" href="#">Entrar</button>
+                <a class="button btn" id="login" href="#">Entrar</a>
             </div>
             <div class="text-center">
-                <a class="d-block small mt-3" href="register.html">Realizar cadastro</a>
-                <a class="d-block small" href="forgot-password.html">Esqueceu a senha?</a>
+                <a class="d-block small mt-3 link" href="register">Realizar cadastro</a>
+                <a class="d-block small link" href="forgot-password">Esqueceu a senha?</a>
             </div>
         </form>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>

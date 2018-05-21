@@ -132,8 +132,8 @@
             <input type="submit"  data-popup-open="popup-1" value="Finalizar cadastro" class="btn btn-primary btn-block">
 
             <div class="text-center">
-                <a class="d-block small mt-3" href="login.html">Realizar login</a>
-                <a class="d-block small" href="forgot-password.html">Esqueceu a senha?</a>
+                <a class="d-block small mt-3" href="login">Realizar login</a>
+                <a class="d-block small" href="forgot-password">Esqueceu a senha?</a>
             </div>
 
 </form>

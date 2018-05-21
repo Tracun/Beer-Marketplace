@@ -24,7 +24,7 @@ form {
   display: block;
   width: 100%;
   max-width: 400px;
-  background-color: #FFF;
+  background-color: #21201c;
   margin: 0;
   padding: 2.25em;
   -webkit-box-sizing: border-box;
@@ -105,7 +105,7 @@ form input[type='email']:focus, form input[type="text"]:focus, form input[type='
 form input[type='email'], form input[type="text"] {
   padding: 14px 1em 0px;
 }
-form button {
+form .button {
   display: block;
   margin: 0;
   padding: .65em 1em 1em;
@@ -119,7 +119,7 @@ form button {
   width: 100%;
   height: 65px;
   font-size: 1.55em;
-  color: #FFF;
+  color: #21201c;
   font-weight: 600;
   font-family: inherit;
   -webkit-transition: background-color .2s ease-out;
@@ -155,4 +155,8 @@ form .inputGroup1.focusWithText .helper {
   -webkit-transform: translate(1.4em, 2em) scale(0.65);
           transform: translate(1.4em, 2em) scale(0.65);
   opacity: 1;
+}
+
+form .link{
+  color: #ffc300;
 }

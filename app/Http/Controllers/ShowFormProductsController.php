@@ -1,7 +1,7 @@
 <?php
 
 /**
-*
+*  @author: Lucas Lacerda
 *  @author: Lucas Alves
 *
 */
@@ -19,10 +19,9 @@ class ShowFormProductsController extends Controller
      */
     public function index()
     {
-      $categories = \App\Category::get();
-      $countries = \App\Nationality::get();
-
-      return view('forms.register-products', ['categories' => $categories, 'countries' => $countries]);
+      $categories = \App\Category::pluck('name', 'id');
+      $countries = \App\Nationality::pluck('country', 'id');
+     return view('forms.register-products', ['categories' => $categories, 'countries' => $countries]);
     }
 
     /**
@@ -65,7 +64,11 @@ class ShowFormProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+      $product = \App\Product::findOrFail($id);
+      $categories = \App\Category::get();
+      $countries = \App\Nationality::get();
+      return view('forms.register-products', ['product' => $product ,'categories' => $categories, 'countries' => $countries]);
+
     }
 
     /**
